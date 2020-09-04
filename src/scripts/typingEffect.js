@@ -50,7 +50,7 @@ function RunTypingEffect() {
           "fadeIn 2s";
         document.getElementById("view_my_work_button").style.opacity = "0.7";
         document.getElementById("view_my_work_button").style.animation =
-          "blinkFade 0.125s infinite linear";
+          "Flicker 0.125s infinite linear";
       }
       return;
     }

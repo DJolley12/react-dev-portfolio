@@ -6,6 +6,7 @@ function NavBar() {
       class="sticky-top"
       style={{
         background: "transparent",
+        opacity: ".7",
         padding: ".25rem 0",
         // borderTop: "solid 2px #30c31c",
         // borderBottom: "solid 2px #30c31c",
@@ -13,16 +14,22 @@ function NavBar() {
     >
       <nav>
         <div className="col-sm-2"></div>
-        <a className="secondary_button col-sm-2" id="home_nav_button">
+        <a className="secondary_button flicker col-sm-2" id="home_nav_button">
           Home
         </a>
-        <a className="secondary_button col-sm-2" id="about_nav_button">
+        <a className="secondary_button flicker col-sm-2" id="about_nav_button">
           About
         </a>
-        <a className="secondary_button col-sm-2" id="portfolio_nav_button">
+        <a
+          className="secondary_button flicker col-sm-2"
+          id="portfolio_nav_button"
+        >
           Portfolio
         </a>
-        <a className="secondary_button col-sm-2" id="contact_nav_button">
+        <a
+          className="secondary_button flicker col-sm-2"
+          id="contact_nav_button"
+        >
           Contact
         </a>
         <div className="col-sm-2"></div>

@@ -2,10 +2,10 @@ import React from "react";
 
 function IconSection() {
   return (
-    <section className="icon-list">
-      <i className="nes-icon github is-large"></i>
-      <i className="nes-icon linkedin is-large"></i>
-      <i className="nes-icon gmail is-large"></i>
+    <section className="d-flex justify-content-center">
+      <i className="icon_list nes-icon github is-large d-flex justify-content-lg-center flicker"></i>
+      <i className="icon_list nes-icon linkedin is-large d-flex justify-content-lg-center flicker"></i>
+      <i className="icon_list nes-icon gmail is-large d-flex justify-content-lg-center flicker  "></i>
     </section>
   );
 }
