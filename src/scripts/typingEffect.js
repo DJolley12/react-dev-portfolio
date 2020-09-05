@@ -15,7 +15,7 @@ const introDescription = [
   "Let's talk!",
 ];
 
-let elementId = "main_page_name";
+let elementId = "intro_text";
 
 let props = {
   text1: introductionText,
@@ -43,7 +43,7 @@ function RunTypingEffect() {
     ) {
       wordNumberForIntro = 0;
       wordNumberForText = 0;
-      if (elementId === "main_page_name") {
+      if (elementId === "intro_text") {
         document.getElementById("view_my_work_button").style.visibility =
           "visible";
         document.getElementById("view_my_work_button").style.animation =

@@ -6,8 +6,7 @@ function ThemeButton() {
       <div float-right id="theme_button_div">
         <button
           type="color_theme_btn button"
-          style={{ backgroundColor: "#737373" }}
-          class="nes-btn"
+          class="main_button"
           id="color_theme_btn"
         >
           Theme: Light

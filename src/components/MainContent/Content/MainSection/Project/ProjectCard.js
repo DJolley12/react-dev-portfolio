@@ -1,9 +1,16 @@
 import React from "react";
 
-function ProjectCard() {
+function ProjectCard(props) {
   return (
     <div className="d-flex justify-content-lg-center project_card">
-      <p>Content</p>
+      <div className="row">
+        <h4 className="text-align-left" style={{ paddingLeft: "1rem" }}>
+          {props.content.heading}
+        </h4>
+        <p className="text-align-left" style={{ paddingLeft: "1rem" }}>
+          {props.content.description}
+        </p>
+      </div>
     </div>
   );
 }

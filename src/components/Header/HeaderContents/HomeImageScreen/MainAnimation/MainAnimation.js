@@ -1,6 +1,6 @@
 import React from "react";
 import MainButton from "../../../../Shared/MainButton";
-let main_page_name_styles = {
+let intro_text_styles = {
   color: "#30c31c",
   font: "bold",
   paddingTop: "20%",
@@ -23,9 +23,9 @@ function MainAnimation() {
     <div class="text-left">
       <span class="align-left">
         <h1
-          class="main_page_name col-sm-8"
-          id="main_page_name"
-          style={{ main_page_name_styles }}
+          class="intro_text col-sm-8"
+          id="intro_text"
+          style={{ intro_text_styles }}
         ></h1>
         <div class="row justify-content-start col-sm-6">
           <MainButton text="View My Work" />
