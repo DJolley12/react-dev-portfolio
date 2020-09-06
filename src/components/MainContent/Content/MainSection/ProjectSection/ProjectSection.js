@@ -5,18 +5,45 @@ const ucContent = {
   heading: "Utah Committee",
   description:
     "A live website-Razor Pages, C#, SQL, Entity Framework, Bootstrap",
+  languages: [
+    "C#",
+    // "ASP.NET Core",
+    // "Razor Pages",
+    // "JavaScript",
+    // "JQuery",
+    // "Bootstrap",
+    // "Entity Framework",
+  ],
 };
 
 const siteContent = {
   heading: "This Site",
   description:
     "React, Bootstrap, Vanilla JavaScript, NES.css, Vanilla CSS, and HTML5.",
+  languages: [
+    "C#",
+    "ASP.NET Core",
+    "Razor Pages",
+    "JavaScript",
+    "JQuery",
+    "Bootstrap",
+    "Entity Framework",
+  ],
 };
 
 const dbBackup = {
   heading: "Database Backup",
   description:
     "Database backup tool written in C#, for backing up both Azure and local SQL databases",
+  languages: [
+    "C#",
+    "ASP.NET Core",
+    "Razor Pages",
+    "JavaScript",
+    "JQuery",
+    "Bootstrap",
+    "Entity Framework",
+  ],
 };
 
 function ProjectSection() {

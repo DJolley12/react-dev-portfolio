@@ -1,4 +1,5 @@
 import React from "react";
+import CodeBadge from "./CodeBadge";
 
 function ProjectCard(props) {
   return (
@@ -10,6 +11,9 @@ function ProjectCard(props) {
         <p className="text-align-left" style={{ paddingLeft: "1rem" }}>
           {props.content.description}
         </p>
+      </div>
+      <div className="row">
+        <CodeBadge languages={props.content.languages} />
       </div>
     </div>
   );

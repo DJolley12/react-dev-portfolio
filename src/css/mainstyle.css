@@ -196,10 +196,9 @@ footer {
   position: relative;
 }
 .project_card {
-  height: 32vh;
   width: 25vw;
   background-color: #30c31c;
-  opacity: 0.7;
+  opacity: 0.4;
   margin-top: 10vh;
   margin-right: 1vw;
 }
