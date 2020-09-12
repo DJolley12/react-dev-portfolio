@@ -1,6 +1,11 @@
 import React from "react";
 import IconSection from "./FooterContents/IconSection";
 
+const nesIconStyles = {
+  marginLeft: ".75vw",
+  marginTop: "-2vh",
+};
+
 function Footer() {
   return (
     <footer>
@@ -13,10 +18,7 @@ function Footer() {
           id="made_by_section"
         >
           Made by Daniel Jolley with{" "}
-          <i
-            class="nes-icon is-medium heart"
-            style={{ paddingLeft: "8vw" }}
-          ></i>
+          <i class="nes-icon is-medium heart" style={nesIconStyles}></i>
         </p>
       </div>
     </footer>
