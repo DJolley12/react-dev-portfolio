@@ -51,6 +51,8 @@ function RunTypingEffect() {
         document.getElementById("view_my_work_button").style.opacity = "0.7";
         document.getElementById("view_my_work_button").style.animation =
           "Flicker 0.125s infinite linear";
+        document.getElementById("main_image").style.visibility = "visible";
+        document.getElementById("main_image").style.animation = "fadeIn 3s";
       }
       return;
     }

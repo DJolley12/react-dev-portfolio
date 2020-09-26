@@ -2,9 +2,9 @@ import React from "react";
 import NavBar from "./Content/NavBar";
 import MainSection from "./Content/MainSection/MainSection";
 
-function MainContent() {
+function MainBody() {
   return (
-    <div className="main">
+    <div className="main" id="main_body">
       <div className="striping_effect">
         <NavBar />
         <MainSection />
@@ -13,4 +13,4 @@ function MainContent() {
   );
 }
 
-export default MainContent;
+export default MainBody;

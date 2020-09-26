@@ -1,5 +1,7 @@
 import React from "react";
-import MainButton from "../../../../Shared/MainButton";
+import MainButton from "../../../Shared/MainButton";
+import MainImage from "./MainImage";
+
 let intro_text_styles = {
   color: "#30c31c",
   font: "bold",
@@ -20,15 +22,18 @@ let button_styles = {
 
 function MainAnimation() {
   return (
-    <div class="text-left">
-      <span class="align-left">
+    <div className="text-left">
+      <span className="align-left">
         <h1
-          class="intro_text col-sm-8"
+          className="intro_text col-sm-8"
           id="intro_text"
           style={{ intro_text_styles }}
         ></h1>
-        <div class="row justify-content-start col-sm-6">
+        <div className="row justify-content-start col-sm-6">
           <MainButton text="View My Work" />
+        </div>
+        <div className="row justify-content-center">
+          <MainImage />
         </div>
       </span>
     </div>
