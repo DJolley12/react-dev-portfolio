@@ -15,7 +15,7 @@ const presentationStyles = {
 
 function Header(props) {
   return (
-    <header className="main" id="intro_section">
+    <header className="main">
       <MainBackGroundImage />
       <div className="container-fluid">
         <MainAnimation

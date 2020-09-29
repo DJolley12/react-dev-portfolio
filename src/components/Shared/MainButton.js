@@ -8,8 +8,6 @@ function MainButton(props) {
     props.changeMainSectionDisplay(
       (event.target.displayMainSection = !props.displayMainSection)
     );
-    console.log(event.target.displayMainAnimation);
-    console.log(!props.displayMainAnimation);
   }
 
   return (

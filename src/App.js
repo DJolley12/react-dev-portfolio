@@ -6,10 +6,11 @@ import Footer from "./components/Footer/Footer.js";
 import MainBackGroundImage from "./components/Header/HeaderContents/HomeImageScreen/MainBackGroundImage";
 
 function App() {
+  //Main menu hooks
   const [displayMainAnimation, setDisplayMainAnimation] = useState(true);
   const [displayMainSection, setDisplayMainSection] = useState(false);
-  const [displayAboutSection, setDisplayAboutSection] = useState(false);
 
+  //functions
   function changeMainAnimationDisplay(newDisplay) {
     setDisplayMainAnimation(newDisplay);
     console.log("changeMainAnimCalled");
@@ -19,6 +20,18 @@ function App() {
   function changeMainSectionDisplay(newDisplay) {
     setDisplayMainSection(newDisplay);
     console.log("changeMainSectionCalled");
+  }
+
+  //MainContent hooks
+  const [displayAboutSection, setDisplayAboutSection] = useState(true);
+  const [displayProjectSection, setDisplayProjectSection] = useState(false);
+
+  function changeAboutSectionDisplay(newDisplay) {
+    setDisplayAboutSection(newDisplay);
+  }
+
+  function changeProjectSectionDisplay(newDisplay) {
+    setDisplayProjectSection(newDisplay);
   }
 
   return (
@@ -32,8 +45,9 @@ function App() {
       )}
       {displayMainSection && (
         <MainBody
-          displayMainSection={displayMainSection}
-          onChange={[changeMainAnimationDisplay, changeMainSectionDisplay]}
+          displayAboutSection={displayAboutSection}
+          displayProjectSection={displayProjectSection}
+          onChange={[changeAboutSectionDisplay, changeProjectSectionDisplay]}
         />
       )}
     </>

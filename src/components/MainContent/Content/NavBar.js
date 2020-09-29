@@ -1,9 +1,9 @@
 import React from "react";
 
-function NavBar() {
+function NavBar(props) {
   return (
     <div
-      class="sticky-top layer-top"
+      class="sticky-top layer-top nav_bar"
       style={{
         background: "transparent",
         opacity: ".7",
