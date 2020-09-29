@@ -1,6 +1,7 @@
 import React from "react";
 import AboutHeading from "./contents/AboutHeading";
 import AboutDescription from "./contents/AboutDescription";
+import NavBar from "../../../Content/NavBar";
 
 // const aboutDescription = {
 //   description:
@@ -14,7 +15,7 @@ const aboutDescription = {
 
 function AboutSection() {
   return (
-    <div className="container-flex">
+    <div className="container-flex layer-top main-border">
       <AboutHeading />
       <AboutDescription content={aboutDescription} />
     </div>

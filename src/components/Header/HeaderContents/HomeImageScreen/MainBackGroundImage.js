@@ -35,8 +35,8 @@ let styles = {
   //   zIndex: "9999",
 };
 
-function HomeImageScreen() {
+function MainBackGroundImage() {
   return <div className="striping_effect" id="home_image_screen"></div>;
 }
 
-export default HomeImageScreen;
+export default MainBackGroundImage;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MainButton from "../../../Shared/MainButton";
 import MainImage from "./MainImage";
 
@@ -20,9 +20,9 @@ let button_styles = {
   color: "#30c31c",
 };
 
-function MainAnimation() {
+function MainAnimation(props) {
   return (
-    <div className="text-left">
+    <div className="text-left" id="main-animation">
       <span className="align-left">
         <h1
           className="intro_text col-sm-8"
@@ -30,7 +30,13 @@ function MainAnimation() {
           style={{ intro_text_styles }}
         ></h1>
         <div className="row justify-content-start col-sm-6">
-          <MainButton text="View My Work" />
+          <MainButton
+            text="View My Work"
+            displayMainAnimation={props.displayMainAnimation}
+            displayMainSection={props.displayMainSection}
+            changeMainAnimationDisplay={props.onChange[0]}
+            changeMainSectionDisplay={props.onChange[1]}
+          />
         </div>
         <div className="row justify-content-center">
           <MainImage />
