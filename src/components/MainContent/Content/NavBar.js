@@ -1,9 +1,40 @@
 import React from "react";
 
 function NavBar(props) {
+  function handleAboutClick(event) {
+    console.log("about clicked");
+    props.changeAboutSectionDisplay((event.target.displayAboutSection = true));
+    props.changeProjectSectionDisplay(
+      (event.target.displayProjectSection = false)
+    );
+    props.changeContactSectionDisplay(
+      (event.target.displayContactSection = true)
+    );
+  }
+
+  function handlePortfolioClick(event) {
+    props.changeAboutSectionDisplay((event.target.displayAboutSection = false));
+    props.changeProjectSectionDisplay(
+      (event.target.displayProjectSection = true)
+    );
+    props.changeContactSectionDisplay(
+      (event.target.displayContactSection = false)
+    );
+  }
+
+  function handleContactClick(event) {
+    props.changeAboutSectionDisplay((event.target.displayAboutSection = false));
+    props.changeProjectSectionDisplay(
+      (event.target.displayProjectSection = false)
+    );
+    props.changeContactSectionDisplay(
+      (event.target.displayContactSection = true)
+    );
+  }
+
   return (
     <div
-      class="sticky-top layer-top nav_bar"
+      className="sticky-top layer-top nav_bar"
       style={{
         background: "transparent",
         opacity: ".7",
@@ -14,30 +45,33 @@ function NavBar(props) {
     >
       <nav>
         <div className="col-sm-2"></div>
-        <a
+        <button
           className="secondary_button flicker  nav_button"
           id="home_nav_button"
         >
           Home
-        </a>
-        <a
+        </button>
+        <button
           className="secondary_button flicker  nav_button"
           id="about_nav_button"
+          onClick={handleAboutClick}
         >
           About
-        </a>
-        <a
+        </button>
+        <button
           className="secondary_button flicker  nav_button"
           id="portfolio_nav_button"
+          onClick={handlePortfolioClick}
         >
           Portfolio
-        </a>
-        <a
+        </button>
+        <button
           className="secondary_button flicker  nav_button"
           id="contact_nav_button"
+          onClick={handleContactClick}
         >
           Contact
-        </a>
+        </button>
       </nav>
       {/* <label>
         <input

@@ -11,7 +11,12 @@ function MainBody(props) {
       <div className="striping_effect">
         {props.displayAboutSection && <AboutSection />}
         {props.displayProjectSection && <ProjectSection />}
-        <NavBar onChange={[props.onChange[0], props.onChange[1]]} />
+        <NavBar
+          displayAboutSection={props.displayAboutSection}
+          displayProjectSection={props.displayProjectSection}
+          displayContactSection={props.displayContactSection}
+          onChange={[props.onChange[0], props.onChange[1], props.onChange[2]]}
+        />
       </div>
     </div>
   );

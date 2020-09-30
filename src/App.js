@@ -25,6 +25,7 @@ function App() {
   //MainContent hooks
   const [displayAboutSection, setDisplayAboutSection] = useState(true);
   const [displayProjectSection, setDisplayProjectSection] = useState(false);
+  const [displayContactSection, setDisplayContactSection] = useState(false);
 
   function changeAboutSectionDisplay(newDisplay) {
     setDisplayAboutSection(newDisplay);
@@ -32,6 +33,10 @@ function App() {
 
   function changeProjectSectionDisplay(newDisplay) {
     setDisplayProjectSection(newDisplay);
+  }
+
+  function changeContactSectionDisplay(newDisplay) {
+    setDisplayContactSection(newDisplay);
   }
 
   return (
@@ -47,7 +52,12 @@ function App() {
         <MainBody
           displayAboutSection={displayAboutSection}
           displayProjectSection={displayProjectSection}
-          onChange={[changeAboutSectionDisplay, changeProjectSectionDisplay]}
+          displayContactSection={displayContactSection}
+          onChange={[
+            changeAboutSectionDisplay,
+            changeProjectSectionDisplay,
+            changeContactSectionDisplay,
+          ]}
         />
       )}
     </>
