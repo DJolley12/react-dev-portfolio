@@ -11,15 +11,7 @@
   z-index: 9999;
   /* color: #30c31c; */
 }
-.main-border {
-  border-left: 4px dashed #30c31c;
-  border-right: 4px dashed #30c31c;
-  border-top: 4px solid #30c31c;
-  border-bottom: 4px solid #30c31c;
-  margin-right: 20%;
-  margin-left: 20%;
-  margin-top: 20vh;
-}
+
 .bottom-border {
   border-bottom: 4px solid #30c31c;
 }

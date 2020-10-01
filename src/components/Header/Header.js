@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // import ThemeButton from "./HeaderContents/ThemeButton";
 import MainBackGroundImage from "./HeaderContents/HomeImageScreen/MainBackGroundImage";
 import MainAnimation from "./HeaderContents/MainAnimation/MainAnimation";
+import MainBody from "../MainContent/MainBody";
 import ThemeButton from "./HeaderContents/ThemeButton";
 import MainImage from "./HeaderContents/MainAnimation/MainImage";
 import MainContent from "../MainContent/MainBody";
@@ -14,16 +15,48 @@ const presentationStyles = {
 };
 
 function Header(props) {
+  //MainContent hooks
+  const [displayAboutSection, setDisplayAboutSection] = useState(true);
+  const [displayProjectSection, setDisplayProjectSection] = useState(false);
+  const [displayContactSection, setDisplayContactSection] = useState(false);
+
+  //functions
+  function changeAboutSectionDisplay(newDisplay) {
+    setDisplayAboutSection(newDisplay);
+  }
+
+  function changeProjectSectionDisplay(newDisplay) {
+    setDisplayProjectSection(newDisplay);
+  }
+
+  function changeContactSectionDisplay(newDisplay) {
+    setDisplayContactSection(newDisplay);
+  }
+
   return (
     <header className="main">
       <MainBackGroundImage />
-      <div className="container-fluid">
+      {props.displayMainAnimation && (
         <MainAnimation
           displayMainAnimation={props.displayMainAnimation}
           displayMainSection={props.displayMainSection}
           onChange={[props.onChange[0], props.onChange[1]]}
         />
-      </div>
+      )}
+      {props.displayMainSection && (
+        <MainBody
+          displayAboutSection={displayAboutSection}
+          displayProjectSection={displayProjectSection}
+          displayContactSection={displayContactSection}
+          onChange={[
+            props.onChange[0],
+            props.onChange[1],
+            changeAboutSectionDisplay,
+            changeProjectSectionDisplay,
+            changeContactSectionDisplay,
+          ]}
+        />
+      )}
     </header>
   );
 }

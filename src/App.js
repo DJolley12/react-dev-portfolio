@@ -13,53 +13,19 @@ function App() {
   //functions
   function changeMainAnimationDisplay(newDisplay) {
     setDisplayMainAnimation(newDisplay);
-    console.log("changeMainAnimCalled");
-    console.log(newDisplay + "new Display");
-    console.log(displayMainAnimation + "display Main Anim");
   }
   function changeMainSectionDisplay(newDisplay) {
     setDisplayMainSection(newDisplay);
-    console.log("changeMainSectionCalled");
-  }
-
-  //MainContent hooks
-  const [displayAboutSection, setDisplayAboutSection] = useState(true);
-  const [displayProjectSection, setDisplayProjectSection] = useState(false);
-  const [displayContactSection, setDisplayContactSection] = useState(false);
-
-  function changeAboutSectionDisplay(newDisplay) {
-    setDisplayAboutSection(newDisplay);
-  }
-
-  function changeProjectSectionDisplay(newDisplay) {
-    setDisplayProjectSection(newDisplay);
-  }
-
-  function changeContactSectionDisplay(newDisplay) {
-    setDisplayContactSection(newDisplay);
   }
 
   return (
     <>
-      {displayMainAnimation && (
-        <Header
-          displayMainAnimation={displayMainAnimation}
-          displayMainSection={displayMainSection}
-          onChange={[changeMainAnimationDisplay, changeMainSectionDisplay]}
-        />
-      )}
-      {displayMainSection && (
-        <MainBody
-          displayAboutSection={displayAboutSection}
-          displayProjectSection={displayProjectSection}
-          displayContactSection={displayContactSection}
-          onChange={[
-            changeAboutSectionDisplay,
-            changeProjectSectionDisplay,
-            changeContactSectionDisplay,
-          ]}
-        />
-      )}
+      <Header
+        displayMainAnimation={displayMainAnimation}
+        displayMainSection={displayMainSection}
+        onChange={[changeMainAnimationDisplay, changeMainSectionDisplay]}
+      />
+      {displayMainSection && <Footer />}
     </>
   );
 }

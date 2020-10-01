@@ -5,19 +5,21 @@ import AboutSection from "./Content/MainSection/AboutSection/AboutSection";
 import ProjectSection from "./Content/MainSection/ProjectSection/ProjectSection";
 
 function MainBody(props) {
-  console.log(props);
   return (
-    <div className="main" id="main_body">
-      <div className="striping_effect"></div>
+    <>
       {props.displayAboutSection && <AboutSection />}
       {props.displayProjectSection && <ProjectSection />}
       <NavBar
         displayAboutSection={props.displayAboutSection}
         displayProjectSection={props.displayProjectSection}
         displayContactSection={props.displayContactSection}
-        onChange={[props.onChange[0], props.onChange[1], props.onChange[2]]}
+        changeMainAnimationDisplay={props.onChange[0]}
+        changeMainSectionDisplay={props.onChange[1]}
+        changeAboutSectionDisplay={props.onChange[2]}
+        changeProjectSectionDisplay={props.onChange[3]}
+        changeContactSectionDisplay={props.onChange[4]}
       />
-    </div>
+    </>
   );
 }
 

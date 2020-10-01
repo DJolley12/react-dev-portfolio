@@ -1,6 +1,15 @@
 import React from "react";
 
 function NavBar(props) {
+  function handleHomeClick(event) {
+    console.log(props);
+
+    props.changeMainAnimationDisplay(
+      (event.target.displayMainAnimation = true)
+    );
+    props.changeMainSectionDisplay((event.target.displayMainSection = false));
+  }
+
   function handleAboutClick(event) {
     console.log("about clicked");
     props.changeAboutSectionDisplay((event.target.displayAboutSection = true));
@@ -46,33 +55,34 @@ function NavBar(props) {
     >
       <nav className="layer-top">
         <div className="col-sm-2 layer-top"></div>
-        <button
+        <a
           className="secondary_button flicker  nav_button"
           id="home_nav_button"
+          onClick={handleHomeClick}
         >
           Home
-        </button>
-        <button
-          className="secondary_button flicker layer-top nav_button"
+        </a>
+        <a
+          className="secondary_button flicker nav_button"
           id="about_nav_button"
           onClick={handleAboutClick}
         >
           About
-        </button>
-        <button
+        </a>
+        <a
           className="secondary_button flicker  nav_button"
           id="portfolio_nav_button"
           onClick={handlePortfolioClick}
         >
           Portfolio
-        </button>
-        <button
+        </a>
+        <a
           className="secondary_button flicker  nav_button"
           id="contact_nav_button"
           onClick={handleContactClick}
         >
           Contact
-        </button>
+        </a>
       </nav>
       {/* <label>
         <input
