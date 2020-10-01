@@ -39,12 +39,13 @@ function NavBar(props) {
         background: "transparent",
         opacity: ".7",
         padding: ".25rem 0",
+        zIndex: "10000",
         // borderTop: "solid 2px #30c31c",
         // borderBottom: "solid 2px #30c31c",
       }}
     >
-      <nav>
-        <div className="col-sm-2"></div>
+      <nav className="layer-top">
+        <div className="col-sm-2 layer-top"></div>
         <button
           className="secondary_button flicker  nav_button"
           id="home_nav_button"
@@ -52,7 +53,7 @@ function NavBar(props) {
           Home
         </button>
         <button
-          className="secondary_button flicker  nav_button"
+          className="secondary_button flicker layer-top nav_button"
           id="about_nav_button"
           onClick={handleAboutClick}
         >
