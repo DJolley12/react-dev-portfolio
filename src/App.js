@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header.js";
-import MainBody from "./components/MainContent/MainBody.js";
 import Footer from "./components/Footer/Footer.js";
-import MainBackGroundImage from "./components/Header/HeaderContents/HomeImageScreen/MainBackGroundImage";
 
 function App() {
   //Main menu hooks
