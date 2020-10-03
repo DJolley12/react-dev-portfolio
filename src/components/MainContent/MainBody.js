@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./Content/NavBar";
 import MainSection from "./Content/MainSection/MainSection";
 import AboutSection from "./Content/MainSection/AboutSection/AboutSection";

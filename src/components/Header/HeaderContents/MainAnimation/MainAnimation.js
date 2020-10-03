@@ -21,8 +21,18 @@ let button_styles = {
   color: "#30c31c",
 };
 
+function returnHeaderText() {
+  document.getElementById("intro_text").innerText =
+    "I make websites, desktop apps, web apps, ...and other stuff! Let's talk!";
+  document.getElementById("view_my_work_button").style.visibility = "visible";
+  document.getElementById("main_image").style.visibility = "visible";
+}
+
 function MainAnimation(props) {
-  useEffect(() => RunTypingEffect());
+  useEffect(() => {
+    //ternary for putting button and h1 conditionally after first load, store intitial load in state
+    props.initialLoad ? RunTypingEffect() : returnHeaderText();
+  });
   return (
     <div className="container-fluid">
       <div className="text-left" id="main-animation">
@@ -37,8 +47,10 @@ function MainAnimation(props) {
               text="View My Work"
               displayMainAnimation={props.displayMainAnimation}
               displayMainSection={props.displayMainSection}
+              initialLoad={props.initialLoad}
               changeMainAnimationDisplay={props.onChange[0]}
               changeMainSectionDisplay={props.onChange[1]}
+              changeInitialLoad={props.onChange[2]}
             />
           </div>
           <div className="row justify-content-center">

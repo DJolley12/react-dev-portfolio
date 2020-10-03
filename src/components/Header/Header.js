@@ -40,7 +40,8 @@ function Header(props) {
         <MainAnimation
           displayMainAnimation={props.displayMainAnimation}
           displayMainSection={props.displayMainSection}
-          onChange={[props.onChange[0], props.onChange[1]]}
+          initialLoad={props.initialLoad}
+          onChange={[props.onChange[0], props.onChange[1], props.onChange[2]]}
         />
       )}
       {props.displayMainSection && (

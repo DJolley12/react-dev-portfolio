@@ -8,6 +8,7 @@ function MainButton(props) {
     props.changeMainSectionDisplay(
       (event.target.displayMainSection = !props.displayMainSection)
     );
+    props.changeInitialLoad((event.target.initialLoad = false));
   }
 
   return (

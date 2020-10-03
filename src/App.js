@@ -18,12 +18,25 @@ function App() {
     setDisplayMainSection(newDisplay);
   }
 
+  //Initial load hook
+  const [initialLoad, setInitialLoad] = useState(true);
+
+  //function
+  function changeInitialLoad(newLoadState) {
+    setInitialLoad(newLoadState);
+  }
+
   return (
     <>
       <Header
         displayMainAnimation={displayMainAnimation}
         displayMainSection={displayMainSection}
-        onChange={[changeMainAnimationDisplay, changeMainSectionDisplay]}
+        initialLoad={initialLoad}
+        onChange={[
+          changeMainAnimationDisplay,
+          changeMainSectionDisplay,
+          changeInitialLoad,
+        ]}
       />
       {displayMainSection && <Footer />}
     </>
