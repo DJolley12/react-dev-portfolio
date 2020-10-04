@@ -33,7 +33,7 @@ let {
   index,
   subtractIndex,
 } = returnVariables(props);
-function RunTypingEffect() {
+function MainTypingEffect() {
   (function typeDescriptions() {
     let timeOutNumber = 75;
 
@@ -132,4 +132,4 @@ function returnVariables(props) {
   };
 }
 
-export default RunTypingEffect;
+export default MainTypingEffect;

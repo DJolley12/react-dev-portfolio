@@ -31,7 +31,7 @@ function AboutSection() {
       style={mainBorderStyle}
     >
       <AboutHeading />
-      <AboutDescription content={aboutDescription} />
+      <AboutDescription text1={aboutDescription.description} />
     </div>
   );
 }

@@ -4,7 +4,6 @@ import "./index.css";
 import "./css/mainstyle.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import RunTypingEffect from "./scripts/typingEffect";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,8 +11,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-//RunTypingEffect();
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

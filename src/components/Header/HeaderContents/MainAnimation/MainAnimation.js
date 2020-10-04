@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MainButton from "../../../Shared/MainButton";
 import MainImage from "./MainImage";
-import RunTypingEffect from "../../../../scripts/typingEffect";
+import MainTypingEffect from "../../../../scripts/MainTypingEffect";
 
 let intro_text_styles = {
   color: "#30c31c",
@@ -31,7 +31,7 @@ function returnHeaderText() {
 function MainAnimation(props) {
   useEffect(() => {
     //ternary for putting button and h1 conditionally after first load, store intitial load in state
-    props.initialLoad ? RunTypingEffect() : returnHeaderText();
+    props.initialLoad ? MainTypingEffect() : returnHeaderText();
   });
   return (
     <div className="container-fluid">

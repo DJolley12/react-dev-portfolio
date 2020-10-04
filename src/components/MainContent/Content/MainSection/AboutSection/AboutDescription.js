@@ -1,5 +1,6 @@
 import React from "react";
 import SecondaryButton from "../../../../Shared/SecondaryButton";
+import TypingComponent from "../../../../Shared/TypingComponent/TypingComponent";
 
 let aboutDescriptionStyles = {
   paddingLeft: "3%",
@@ -16,12 +17,14 @@ function AboutDescription(props) {
   return (
     <>
       <div className="row">
-        <div
-          className="col-sm-12 main_text_color"
-          style={aboutDescriptionStyles}
-        >
-          {props.content.description}
-        </div>
+        <TypingComponent
+          classString="col-sm-12 main_text_color"
+          text1={props.text1}
+          text2={props.text2}
+          typingContentElementId="about_typing_effect"
+          blinkingEffectElementId="about_typing_effect_blink"
+          styles={aboutDescriptionStyles}
+        />
       </div>
       <SecondaryButton content={stuffILoveContent} />
     </>
