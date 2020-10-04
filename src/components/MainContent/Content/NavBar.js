@@ -43,7 +43,7 @@ function NavBar(props) {
 
   return (
     <div
-      className="sticky-top layer-top nav_bar"
+      className="sticky-top nav_bar"
       style={{
         background: "transparent",
         opacity: ".7",
@@ -54,7 +54,7 @@ function NavBar(props) {
       }}
     >
       <nav className="layer-top">
-        <div className="col-sm-2 layer-top"></div>
+        <div className="col-sm-2"></div>
         <a
           className="secondary_button flicker  nav_button"
           id="home_nav_button"

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ProjectCard from "./contents/ProjectCard";
+import ProjectCard from "./ProjectCard";
 
 const quickTourneys = {
   heading: "Quick Tourneys Gaming",
@@ -103,7 +103,7 @@ function ProjectSection() {
           onMouseLeave={() => setProjectHover(false)}
         />
       </div>
-      <div className="d-flex justify-content-center">
+      {/* <div className="d-flex justify-content-center">
         <ProjectCard
           content={dbBackup}
           hovered={projectHover}
@@ -116,7 +116,7 @@ function ProjectSection() {
           onMouseEnter={() => setProjectHover(true)}
           onMouseLeave={() => setProjectHover(false)}
         />
-      </div>
+      </div> */}
     </div>
   );
 }

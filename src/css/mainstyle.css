@@ -165,6 +165,7 @@ footer {
 .nav_bar {
   position: absolute;
   margin-top: 85vh;
+  margin-left: 27%;
   align-self: center;
 }
 .nav_button {

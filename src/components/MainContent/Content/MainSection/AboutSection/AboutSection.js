@@ -1,6 +1,6 @@
 import React from "react";
-import AboutHeading from "./contents/AboutHeading";
-import AboutDescription from "./contents/AboutDescription";
+import AboutHeading from "./AboutHeading";
+import AboutDescription from "./AboutDescription";
 import NavBar from "../../../Content/NavBar";
 
 // const aboutDescription = {
