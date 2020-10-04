@@ -67,7 +67,7 @@
   z-index: 9999;
   background-color: #282828;
 }
-footer {
+/* footer {
   background-image: linear-gradient(
     to bottom,
     transparent,
@@ -84,7 +84,7 @@ footer {
   height: 5%;
   background-color: #282828;
   z-index: 10000;
-}
+} */
 .flicker {
   animation: Flicker 0.125s infinite linear;
 }

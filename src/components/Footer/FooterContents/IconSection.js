@@ -2,12 +2,13 @@ import React from "react";
 
 const iconSectionStyles = {
   marginLeft: "7.5vw",
+  zIndex: "9999",
 };
 
 function IconSection() {
   return (
     <section
-      className="d-flex justify-content-center"
+      className="d-flex justify-content-center layer-top"
       style={iconSectionStyles}
     >
       <a href="https://github.com/DJolley12">

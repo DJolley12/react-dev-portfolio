@@ -8,7 +8,7 @@ import MainImage from "./HeaderContents/MainAnimation/MainImage";
 import MainContent from "../MainContent/MainBody";
 import NavBar from "../MainContent/Content/NavBar";
 import AboutSection from "../MainContent/Content/MainSection/AboutSection/AboutSection";
-import NavButton from "../Shared/NavButton";
+import NavButton from "../Shared/SecondaryButton";
 
 const presentationStyles = {
   height: "100vh",

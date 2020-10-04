@@ -56,32 +56,32 @@ function NavBar(props) {
       <nav className="layer-top">
         <div className="col-sm-2"></div>
         <a
-          className="secondary_button flicker  nav_button"
+          className="secondary_button flicker nav_button"
           id="home_nav_button"
           onClick={handleHomeClick}
         >
-          Home
+          _home
         </a>
         <a
           className="secondary_button flicker nav_button"
           id="about_nav_button"
           onClick={handleAboutClick}
         >
-          About
+          _about
         </a>
         <a
-          className="secondary_button flicker  nav_button"
+          className="secondary_button flicker nav_button"
           id="portfolio_nav_button"
           onClick={handlePortfolioClick}
         >
-          Portfolio
+          _my_work
         </a>
         <a
-          className="secondary_button flicker  nav_button"
+          className="secondary_button flicker nav_button"
           id="contact_nav_button"
           onClick={handleContactClick}
         >
-          Contact
+          _contact
         </a>
       </nav>
       {/* <label>

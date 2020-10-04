@@ -13,13 +13,15 @@ const mainBorderStyle = {
   borderTop: "4px solid #30c31c",
   borderBottom: "4px solid #30c31c",
   marginRight: "20%",
-  marginLeft: "20%",
-  marginTop: "20vh",
+  marginLeft: "17%",
+  marginTop: "15vh",
+  height: "60vh",
+  width: "65vw",
 };
 
 const aboutDescription = {
   description:
-    "In case you didn't see it in the loading page, *~~zzzz~~* I'm Daniel Jolley, a full Stack Developer. I am a musician, music enthusiast, aviation enthusiast, Instrument Rated Private Pilot,  game enthusiast, and most importantly, a tech enthusiast. ",
+    "I am a Freelance Full Stack Developer, with a consistent need to replace boredom with learning something new. I have a strong background in mainly Back-End and Desktop development, and a deep case of C# fanboy-syndrome, with my Back-End stack of choice being C#, Entity Framework, and SQL. My Front choices are ReactJS and Blazor for SPA's. For Desktop apps, I use C#, Java, and Python. Check out some of my open source projects!",
 };
 
 function AboutSection() {
