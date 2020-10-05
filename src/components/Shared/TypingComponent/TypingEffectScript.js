@@ -32,6 +32,9 @@ function TypingEffectScript(props) {
       currentPhraseSelection = intros[wordNumberForIntro];
       slicedWord = currentPhraseSelection.slice(0, ++index);
 
+      if (checkElementNotMounted(typingContentElementId)) {
+        return;
+      }
       document.getElementById(typingContentElementId).textContent =
         introText + slicedWord;
 
@@ -40,6 +43,9 @@ function TypingEffectScript(props) {
         index = 0;
         timeOutNumber = 200;
         introText += slicedWord;
+        if (checkElementNotMounted(typingContentElementId)) {
+          return;
+        }
         document.getElementById(typingContentElementId).textContent = introText;
         if (wordNumberForIntro === intros.length) {
           timeOutNumber = 500;
@@ -50,7 +56,9 @@ function TypingEffectScript(props) {
       subtractIndex = introText.length;
 
       introText = introText.slice(0, --subtractIndex);
-
+      if (checkElementNotMounted(typingContentElementId)) {
+        return;
+      }
       document.getElementById(typingContentElementId).textContent = introText;
 
       if (introText.length === 0) {
@@ -58,6 +66,9 @@ function TypingEffectScript(props) {
         currentPhraseSelection = descriptions[wordNumberForText];
         slicedWord = currentPhraseSelection.slice(0, ++index);
 
+        if (checkElementNotMounted(typingContentElementId)) {
+          return;
+        }
         document.getElementById(typingContentElementId).textContent =
           descriptionsText + slicedWord;
 
@@ -66,6 +77,9 @@ function TypingEffectScript(props) {
           index = 0;
           timeOutNumber = 200;
           descriptionsText += slicedWord;
+          if (checkElementNotMounted(typingContentElementId)) {
+            return;
+          }
           document.getElementById(
             typingContentElementId
           ).textContent = descriptionsText;
@@ -74,6 +88,13 @@ function TypingEffectScript(props) {
     }
     setTimeout(typeDescriptions, timeOutNumber);
   })();
+}
+
+function checkElementNotMounted(elementId) {
+  if (document.getElementById(elementId) === null) {
+    return true;
+  }
+  return false;
 }
 
 function returnVariables(props) {
