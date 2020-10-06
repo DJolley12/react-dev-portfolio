@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import TypingEffectScript from "./TypingEffectScript";
-import styles from "./typing-component.module.css";
+import "./typing-component.css";
 
 function TypingComponent(props) {
-  console.log(styles);
-  console.log("TypingComponent Props");
-  console.log(props);
   useEffect(() => TypingEffectScript(props));
   return (
     <>

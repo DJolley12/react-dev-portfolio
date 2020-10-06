@@ -35,7 +35,7 @@ let {
 } = returnVariables(props);
 function MainTypingEffect() {
   (function typeDescriptions() {
-    let timeOutNumber = 75;
+    let timeOutNumber = 50;
 
     if (
       wordNumberForText === descriptions.length &&
@@ -71,9 +71,6 @@ function MainTypingEffect() {
         timeOutNumber = 200;
         introText += slicedWord;
         document.getElementById(elementId).textContent = introText;
-        if (wordNumberForIntro === intros.length) {
-          timeOutNumber = 500;
-        }
       }
     } else if (wordNumberForIntro === intros.length) {
       timeOutNumber = 25;
@@ -84,7 +81,7 @@ function MainTypingEffect() {
       document.getElementById(elementId).textContent = introText;
 
       if (introText.length === 0) {
-        timeOutNumber = 75;
+        timeOutNumber = 50;
         currentPhraseSelection = descriptions[wordNumberForText];
         slicedWord = currentPhraseSelection.slice(0, ++index);
 

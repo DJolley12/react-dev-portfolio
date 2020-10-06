@@ -1,6 +1,7 @@
 import React from "react";
 import AboutHeading from "./AboutHeading";
 import AboutDescription from "./AboutDescription";
+import SecondaryButton from "../../../../Shared/SecondaryButton";
 import NavBar from "../../../Content/NavBar";
 
 // const aboutDescription = {
@@ -20,8 +21,29 @@ const mainBorderStyle = {
 };
 
 const aboutDescription = {
-  description:
-    "I am a Freelance Full Stack Developer, with a consistent need to replace boredom with learning something new. I have a strong background in mainly Back-End and Desktop development, and a deep case of C# fanboy-syndrome, with my Back-End stack of choice being C#, Entity Framework, and SQL. My Front choices are ReactJS and Blazor for SPA's. For Desktop apps, I use C#, Java, and Python. Check out some of my open source projects!",
+  description: [
+    "I am a Freelance Full Stack Developer, ",
+    "with a consistent need to replace boredom with learning something new. ",
+    "I have a strong background ",
+    "in mainly Back-End and Desktop development, ",
+    "and a deep case of C# fanboy-syndrome, ",
+    "with my Back-End stack of choice being C#, ",
+    "Entity Framework, and SQL. ",
+    "My Front choices are ReactJS and Blazor for SPA's. ",
+    "For Desktop apps, ",
+    "I use C#, ",
+    "Java, and Python. ",
+    "Check out some of my open source projects!",
+  ],
+};
+
+const stuffILoveContent = {
+  buttonText: "_stuff_i_love",
+  styles: {
+    position: "absolute",
+    top: "50vh",
+    left: "2vw",
+  },
 };
 
 function AboutSection() {
@@ -32,6 +54,7 @@ function AboutSection() {
     >
       <AboutHeading />
       <AboutDescription text1={aboutDescription.description} />
+      <SecondaryButton content={stuffILoveContent} />
     </div>
   );
 }

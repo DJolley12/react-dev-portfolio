@@ -6,13 +6,6 @@ let aboutDescriptionStyles = {
   paddingLeft: "3%",
 };
 
-const stuffILoveContent = {
-  buttonText: "_stuff_i_love",
-  styles: {
-    marginTop: "60vh",
-  },
-};
-
 function AboutDescription(props) {
   return (
     <>
@@ -26,7 +19,6 @@ function AboutDescription(props) {
           styles={aboutDescriptionStyles}
         />
       </div>
-      <SecondaryButton content={stuffILoveContent} />
     </>
   );
 }

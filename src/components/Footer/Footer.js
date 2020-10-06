@@ -14,7 +14,7 @@ function Footer() {
           <IconSection />
         </div>
         <p
-          className="d-flex justify-content-center main_text_color"
+          className="d-flex justify-content-center main_text_color layer-top"
           id="made_by_section"
         >
           Made by Daniel Jolley with{" "}

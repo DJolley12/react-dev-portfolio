@@ -16,7 +16,7 @@ function TypingEffectScript(props) {
   } = returnVariables(props);
 
   (function typeDescriptions() {
-    let timeOutNumber = 75;
+    let timeOutNumber = 50;
 
     if (
       wordNumberForText === descriptions.length &&
@@ -47,9 +47,6 @@ function TypingEffectScript(props) {
           return;
         }
         document.getElementById(typingContentElementId).textContent = introText;
-        if (wordNumberForIntro === intros.length) {
-          timeOutNumber = 500;
-        }
       }
     } else if (wordNumberForIntro === intros.length) {
       timeOutNumber = 25;
@@ -62,7 +59,7 @@ function TypingEffectScript(props) {
       document.getElementById(typingContentElementId).textContent = introText;
 
       if (introText.length === 0) {
-        timeOutNumber = 75;
+        timeOutNumber = 130;
         currentPhraseSelection = descriptions[wordNumberForText];
         slicedWord = currentPhraseSelection.slice(0, ++index);
 
@@ -75,7 +72,7 @@ function TypingEffectScript(props) {
         if (slicedWord.length === currentPhraseSelection.length) {
           wordNumberForText++;
           index = 0;
-          timeOutNumber = 200;
+          timeOutNumber = 130;
           descriptionsText += slicedWord;
           if (checkElementNotMounted(typingContentElementId)) {
             return;
