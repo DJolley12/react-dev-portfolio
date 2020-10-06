@@ -1,0 +1,12 @@
+.nes-badge {
+  position: relative;
+  display: inline-block;
+  width: 12em;
+  height: 1.875em;
+  font-size: 0.6em;
+  white-space: nowrap;
+  vertical-align: top;
+  user-select: none;
+  left: -75%;
+  margin: 0.5em;
+}

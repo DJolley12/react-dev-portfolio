@@ -90,7 +90,7 @@ function ProjectSection() {
           onMouseEnter={() => setProjectHover(true)}
           onMouseLeave={() => setProjectHover(false)}
         />
-        <ProjectCard
+        {/* <ProjectCard
           content={codWrapperContent}
           hovered={projectHover}
           onMouseEnter={() => setProjectHover(true)}
@@ -101,7 +101,7 @@ function ProjectSection() {
           hovered={projectHover}
           onMouseEnter={() => setProjectHover(true)}
           onMouseLeave={() => setProjectHover(false)}
-        />
+        /> */}
       </div>
       {/* <div className="d-flex justify-content-center">
         <ProjectCard

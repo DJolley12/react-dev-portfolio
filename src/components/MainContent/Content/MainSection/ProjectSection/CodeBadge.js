@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./code-badge.css";
+
 function CodeBadge(props) {
   const languages = props.content.languages.map((language) => (
     <a key={props.content.heading + language} href="#" class="nes-badge">
