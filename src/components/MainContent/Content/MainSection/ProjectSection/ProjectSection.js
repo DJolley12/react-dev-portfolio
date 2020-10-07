@@ -8,11 +8,11 @@ const quickTourneys = {
     "Client wanted a solution that would pull data during a tournament with live updates, and the best determined solution was an api wrapper implementation. This is also what inspired me to write the open source wrapper, as there were no API wrappers in C#.",
   languages: [
     "C#",
-    "JavaScript",
-    "ASP.NET Core",
-    "Bootstrap",
-    "MySQL",
-    "JQuery",
+    // "JavaScript",
+    // "ASP.NET Core",
+    // "Bootstrap",
+    // "MySQL",
+    // "JQuery",
   ],
 };
 
@@ -80,7 +80,7 @@ function ProjectSection() {
     <div className="container-flex">
       <div className="row">
         <div className="col-md-4"></div>
-        <h4 className="heading col-md-4">My Work</h4>
+        <h4 className="heading col-md-4 layer-top">My Work</h4>
         <div className="col-md-4"></div>
       </div>
       <div className="d-flex justify-content-center">

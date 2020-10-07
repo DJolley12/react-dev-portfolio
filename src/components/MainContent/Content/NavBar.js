@@ -2,8 +2,6 @@ import React from "react";
 
 function NavBar(props) {
   function handleHomeClick(event) {
-    console.log(props);
-
     props.changeMainAnimationDisplay(
       (event.target.displayMainAnimation = true)
     );
@@ -11,7 +9,6 @@ function NavBar(props) {
   }
 
   function handleAboutClick(event) {
-    console.log("about clicked");
     props.changeAboutSectionDisplay((event.target.displayAboutSection = true));
     props.changeProjectSectionDisplay(
       (event.target.displayProjectSection = false)

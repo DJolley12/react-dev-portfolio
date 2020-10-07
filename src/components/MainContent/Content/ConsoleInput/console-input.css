@@ -1,0 +1,14 @@
+#console_input {
+  caret-color: transparent;
+  color: #30c31c;
+  font-size: 70%;
+  background-color: transparent;
+}
+#console_input::after {
+  content: "";
+  position: absolute;
+  margin-top: 0px;
+  height: 3.5vh;
+  border-right: 0.5vw solid #30c31c;
+  animation: blink 1s infinite ease;
+}

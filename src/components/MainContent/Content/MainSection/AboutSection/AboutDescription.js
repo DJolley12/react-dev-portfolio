@@ -15,7 +15,6 @@ function AboutDescription(props) {
           text1={props.text1}
           text2={props.text2}
           typingContentElementId="about_typing_effect"
-          blinkingEffectElementId="about_typing_effect_blink"
           styles={aboutDescriptionStyles}
         />
       </div>

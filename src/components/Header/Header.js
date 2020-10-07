@@ -49,13 +49,11 @@ function Header(props) {
           displayAboutSection={displayAboutSection}
           displayProjectSection={displayProjectSection}
           displayContactSection={displayContactSection}
-          onChange={[
-            props.onChange[0],
-            props.onChange[1],
-            changeAboutSectionDisplay,
-            changeProjectSectionDisplay,
-            changeContactSectionDisplay,
-          ]}
+          changeMainAnimationDisplay={props.onChange[0]}
+          changeMainSectionDisplay={props.onChange[1]}
+          changeAboutSectionDisplay={changeAboutSectionDisplay}
+          changeProjectSectionDisplay={changeProjectSectionDisplay}
+          changeContactSectionDisplay={changeContactSectionDisplay}
         />
       )}
     </header>
