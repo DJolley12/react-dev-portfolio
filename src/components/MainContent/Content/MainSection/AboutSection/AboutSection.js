@@ -40,10 +40,21 @@ const aboutDescription = {
 
 const stuffILoveContent = {
   buttonText: "_stuff_i_love",
+  class: "about_section_button",
   styles: {
     position: "absolute",
     top: "50vh",
     left: "2vw",
+  },
+};
+
+const myTechStackContent = {
+  buttonText: "my_tech_stack",
+  class: "about_section_button",
+  styles: {
+    position: "absolute",
+    top: "50vh",
+    left: "20vw",
   },
 };
 
@@ -57,6 +68,7 @@ function AboutSection() {
       <AboutHeading />
       <AboutDescription text1={aboutDescription.description} />
       <SecondaryButton content={stuffILoveContent} />
+      <SecondaryButton content={myTechStackContent} />
     </div>
   );
 }

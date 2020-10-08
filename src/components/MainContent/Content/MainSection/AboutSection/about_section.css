@@ -1,7 +1,7 @@
 #about_section {
   animation: about_animation 0.6s ease;
 }
-#_stuff_i_love {
+.about_section_button {
   animation: buttonFadeIn 1s ease;
 }
 @keyframes buttonFadeIn {

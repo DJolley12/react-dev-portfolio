@@ -7,7 +7,7 @@ function SecondaryButton(props) {
   return (
     <a
       id={props.content.buttonText}
-      className="secondary_button flicker"
+      className={"secondary_button flicker " + props.content.class}
       onClick={handleClick}
       style={props.content.styles}
     >
