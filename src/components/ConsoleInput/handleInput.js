@@ -27,7 +27,20 @@ function handleInput(props) {
       e.key === "'"
     ) {
     } else if (e.key === "Enter") {
-      if (text.substring(4, text.length).trim().toLowerCase() === "about") {
+      if (text.substring(4, text.length).trim().toLowerCase() === "home") {
+        props.changeHomeMenuDisplay((e.target.displayHomeMenu = true));
+        props.changeAboutSectionDisplay((e.target.displayAboutSection = false));
+        props.changeProjectSectionDisplay(
+          (e.target.displayProjectSection = false)
+        );
+        props.changeContactSectionDisplay(
+          (e.target.displayContactSection = false)
+        );
+        props.changeConsoleInputDisplay((e.target.displayConsoleInput = false));
+      } else if (
+        text.substring(4, text.length).trim().toLowerCase() === "about"
+      ) {
+        props.changeHomeMenuDisplay((e.target.displayHomeMenu = false));
         props.changeAboutSectionDisplay((e.target.displayAboutSection = true));
         props.changeProjectSectionDisplay(
           (e.target.displayProjectSection = false)
@@ -39,6 +52,7 @@ function handleInput(props) {
       } else if (
         text.substring(4, text.length).trim().toLowerCase() === "mywork"
       ) {
+        props.changeHomeMenuDisplay((e.target.displayHomeMenu = false));
         props.changeAboutSectionDisplay((e.target.displayAboutSection = false));
         props.changeProjectSectionDisplay(
           (e.target.displayProjectSection = true)
@@ -50,6 +64,7 @@ function handleInput(props) {
       } else if (
         text.substring(4, text.length).trim().toLowerCase() === "contact"
       ) {
+        props.changeHomeMenuDisplay((e.target.displayHomeMenu = false));
         props.changeAboutSectionDisplay((e.target.displayAboutSection = false));
         props.changeProjectSectionDisplay(
           (e.target.displayProjectSection = false)
@@ -59,6 +74,7 @@ function handleInput(props) {
         );
         props.changeConsoleInputDisplay((e.target.displayConsoleInput = false));
       } else if (text.substring(4, text.length).trim().toLowerCase() === "") {
+        props.changeHomeMenuDisplay((e.target.displayHomeMenue = true));
         props.changeConsoleInputDisplay((e.target.displayConsoleInput = false));
       } else {
         //handle invalid command

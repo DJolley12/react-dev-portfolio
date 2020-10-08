@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import AboutSection from "./Content/MainSection/AboutSection/AboutSection";
 import ConsoleInput from "../ConsoleInput/ConsoleInput";
+import HomeMenu from "./Content/MainSection/HomeMenu/HomeMenu";
 import MainSection from "./Content/MainSection/MainSection";
 import NavBar from "./Content/NavBar";
 import ProjectSection from "./Content/MainSection/ProjectSection/ProjectSection";
@@ -41,13 +42,17 @@ function MainBody(props) {
 
   return (
     <>
+      {/* {props.displayHomeMenu && <HomeMenu />} */}
       {props.displayAboutSection && <AboutSection />}
       {props.displayProjectSection && <ProjectSection />}
+      {/* {prop.displayContactSection && <ContactSection />} */}
       {displayConsoleInput && (
         <ConsoleInput
+          displayHomeMenu={props.displayHomeMenu}
           displayAboutSection={props.displayAboutSection}
           displayProjectSection={props.displayProjectSection}
           displayContactSection={props.displayContactSection}
+          changeHomeMenuDisplay={props.changeHomeMenuDisplay}
           changeAboutSectionDisplay={props.changeAboutSectionDisplay}
           changeProjectSectionDisplay={props.changeProjectSectionDisplay}
           changeContactSectionDisplay={props.changeContactSectionDisplay}
@@ -55,9 +60,11 @@ function MainBody(props) {
         />
       )}
       <NavBar
+        displayHomeMenu={props.displayHomeMenu}
         displayAboutSection={props.displayAboutSection}
         displayProjectSection={props.displayProjectSection}
         displayContactSection={props.displayContactSection}
+        changeHomeMenuDisplay={props.changeHomeMenuDisplay}
         changeMainAnimationDisplay={props.changeMainAnimationDisplay}
         changeMainSectionDisplay={props.changeMainSectionDisplay}
         changeAboutSectionDisplay={props.changeAboutSectionDisplay}

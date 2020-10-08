@@ -16,11 +16,16 @@ const presentationStyles = {
 
 function Header(props) {
   //MainContent hooks
-  const [displayAboutSection, setDisplayAboutSection] = useState(true);
+  const [displayHomeMenu, setDisplayHomeMenu] = useState(true);
+  const [displayAboutSection, setDisplayAboutSection] = useState(false);
   const [displayProjectSection, setDisplayProjectSection] = useState(false);
   const [displayContactSection, setDisplayContactSection] = useState(false);
 
   //functions
+  function changeHomeMenuDisplay(newDisplay) {
+    setDisplayHomeMenu(newDisplay);
+  }
+
   function changeAboutSectionDisplay(newDisplay) {
     setDisplayAboutSection(newDisplay);
   }
@@ -48,11 +53,13 @@ function Header(props) {
       )}
       {props.displayMainSection && (
         <MainBody
+          displayHomeMenu={displayHomeMenu}
           displayAboutSection={displayAboutSection}
           displayProjectSection={displayProjectSection}
           displayContactSection={displayContactSection}
           changeMainAnimationDisplay={props.changeMainAnimationDisplay}
           changeMainSectionDisplay={props.changeMainSectionDisplay}
+          changeHomeMenuDisplay={changeHomeMenuDisplay}
           changeAboutSectionDisplay={changeAboutSectionDisplay}
           changeProjectSectionDisplay={changeProjectSectionDisplay}
           changeContactSectionDisplay={changeContactSectionDisplay}

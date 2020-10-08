@@ -2,13 +2,18 @@ import React from "react";
 
 function NavBar(props) {
   function handleHomeClick(event) {
-    props.changeMainAnimationDisplay(
-      (event.target.displayMainAnimation = true)
+    props.changeHomeMenuDisplay((event.target.displayHomeMenu = true));
+    props.changeAboutSectionDisplay((event.target.displayAboutSection = false));
+    props.changeProjectSectionDisplay(
+      (event.target.displayProjectSection = false)
     );
-    props.changeMainSectionDisplay((event.target.displayMainSection = false));
+    props.changeContactSectionDisplay(
+      (event.target.displayContactSection = true)
+    );
   }
 
   function handleAboutClick(event) {
+    props.changeHomeMenuDisplay((event.target.displayHomeMenu = false));
     props.changeAboutSectionDisplay((event.target.displayAboutSection = true));
     props.changeProjectSectionDisplay(
       (event.target.displayProjectSection = false)
@@ -19,6 +24,7 @@ function NavBar(props) {
   }
 
   function handlePortfolioClick(event) {
+    props.changeHomeMenuDisplay((event.target.displayHomeMenu = false));
     props.changeAboutSectionDisplay((event.target.displayAboutSection = false));
     props.changeProjectSectionDisplay(
       (event.target.displayProjectSection = true)
@@ -29,6 +35,7 @@ function NavBar(props) {
   }
 
   function handleContactClick(event) {
+    props.changeHomeMenuDisplay((event.target.displayHomeMenu = false));
     props.changeAboutSectionDisplay((event.target.displayAboutSection = false));
     props.changeProjectSectionDisplay(
       (event.target.displayProjectSection = false)
