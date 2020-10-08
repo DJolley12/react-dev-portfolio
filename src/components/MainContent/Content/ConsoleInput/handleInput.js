@@ -1,4 +1,4 @@
-function handleInput() {
+function handleInput(props) {
   document.onkeydown = document.onkeydown = function (e) {
     e = e || window.event;
     console.log(e);
@@ -27,7 +27,14 @@ function handleInput() {
       e.key === "'"
     ) {
     } else if (e.key === "Enter") {
-      //handle enter press
+      props.changeAboutSectionDisplay((e.target.displayAboutSection = true));
+      props.changeProjectSectionDisplay(
+        (e.target.displayProjectSection = false)
+      );
+      props.changeContactSectionDisplay(
+        (e.target.displayContactSection = false)
+      );
+      props.changeConsoleInputDisplay((e.target.displayConsoleInput = false));
     } else {
       consoleInput.innerText += e.key;
     }

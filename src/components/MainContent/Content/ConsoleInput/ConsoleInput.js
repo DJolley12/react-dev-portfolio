@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./console-input.css";
 import handleInput from "./handleInput";
 
-function ConsoleInput() {
-  handleInput();
+function ConsoleInput(props) {
+  handleInput(props);
   let placeholder = "C:\\>";
   const [consoleInputContent, changeConsoleInputContent] = useState("");
   return (
