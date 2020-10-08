@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import AboutSection from "./Content/MainSection/AboutSection/AboutSection";
-import ConsoleInput from "../MainContent/Content/ConsoleInput/ConsoleInput";
+import ConsoleInput from "../ConsoleInput/ConsoleInput";
 import MainSection from "./Content/MainSection/MainSection";
 import NavBar from "./Content/NavBar";
 import ProjectSection from "./Content/MainSection/ProjectSection/ProjectSection";

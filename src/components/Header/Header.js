@@ -41,7 +41,9 @@ function Header(props) {
           displayMainAnimation={props.displayMainAnimation}
           displayMainSection={props.displayMainSection}
           initialLoad={props.initialLoad}
-          onChange={[props.onChange[0], props.onChange[1], props.onChange[2]]}
+          changeMainAnimationDisplay={props.changeMainAnimationDisplay}
+          changeMainSectionDisplay={props.changeMainSectionDisplay}
+          changeInitialLoad={props.changeInitialLoad}
         />
       )}
       {props.displayMainSection && (
@@ -49,8 +51,8 @@ function Header(props) {
           displayAboutSection={displayAboutSection}
           displayProjectSection={displayProjectSection}
           displayContactSection={displayContactSection}
-          changeMainAnimationDisplay={props.onChange[0]}
-          changeMainSectionDisplay={props.onChange[1]}
+          changeMainAnimationDisplay={props.changeMainAnimationDisplay}
+          changeMainSectionDisplay={props.changeMainSectionDisplay}
           changeAboutSectionDisplay={changeAboutSectionDisplay}
           changeProjectSectionDisplay={changeProjectSectionDisplay}
           changeContactSectionDisplay={changeContactSectionDisplay}

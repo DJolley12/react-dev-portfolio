@@ -1,8 +1,8 @@
 #console_input {
   caret-color: transparent;
-  color: #30c31c;
   font-size: 70%;
   background-color: transparent;
+  top: 15%;
 }
 #console_input::after {
   content: "";

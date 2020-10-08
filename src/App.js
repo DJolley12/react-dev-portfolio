@@ -30,11 +30,9 @@ function App() {
         displayMainAnimation={displayMainAnimation}
         displayMainSection={displayMainSection}
         initialLoad={initialLoad}
-        onChange={[
-          changeMainAnimationDisplay,
-          changeMainSectionDisplay,
-          changeInitialLoad,
-        ]}
+        changeMainAnimationDisplay={changeMainAnimationDisplay}
+        changeMainSectionDisplay={changeMainSectionDisplay}
+        changeInitialLoad={changeInitialLoad}
       />
       {displayMainSection && <Footer />}
     </>

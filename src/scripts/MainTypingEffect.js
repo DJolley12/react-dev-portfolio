@@ -62,6 +62,9 @@ function MainTypingEffect() {
       slicedWord = currentPhraseSelection.slice(0, ++index);
 
       let elementToUpdate = document.getElementById(elementId);
+      if (elementToUpdate === null) {
+        return;
+      }
 
       document.getElementById(elementId).textContent = introText + slicedWord;
 

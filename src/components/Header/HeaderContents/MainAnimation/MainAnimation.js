@@ -48,9 +48,9 @@ function MainAnimation(props) {
               displayMainAnimation={props.displayMainAnimation}
               displayMainSection={props.displayMainSection}
               initialLoad={props.initialLoad}
-              changeMainAnimationDisplay={props.onChange[0]}
-              changeMainSectionDisplay={props.onChange[1]}
-              changeInitialLoad={props.onChange[2]}
+              changeMainAnimationDisplay={props.changeMainAnimationDisplay}
+              changeMainSectionDisplay={props.changeMainSectionDisplay}
+              changeInitialLoad={props.changeInitialLoad}
             />
           </div>
           <div className="row justify-content-center">
