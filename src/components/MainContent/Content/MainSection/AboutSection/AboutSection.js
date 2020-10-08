@@ -1,6 +1,7 @@
 import React from "react";
 import AboutHeading from "./AboutHeading";
 import AboutDescription from "./AboutDescription";
+import "./about_section.css";
 import SecondaryButton from "../../../../Shared/SecondaryButton";
 import NavBar from "../../../Content/NavBar";
 
@@ -50,6 +51,7 @@ function AboutSection() {
   return (
     <div
       className="container-flex layer-top main-border"
+      id="about_section"
       style={mainBorderStyle}
     >
       <AboutHeading />
