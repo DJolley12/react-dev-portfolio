@@ -7,6 +7,9 @@ import InfoHeading from "./Content/MainSection/InfoHeading";
 import MainSection from "./Content/MainSection/MainSection";
 import NavBar from "./Content/NavBar";
 import ProjectSection from "./Content/MainSection/ProjectSection/ProjectSection";
+import handleHome from "./Content/MainSection/keystrokeHandler/handleHome";
+import handleConsoleEnabled from "./Content/MainSection/keystrokeHandler/handleConsoleEnabled";
+import handleKeystrokeInput from "./Content/MainSection/keystrokeHandler/handleKeystrokeInput";
 
 function MainBody(props) {
   const [displayConsoleInput, setDisplayConsoleInput] = useState(false);
@@ -21,25 +24,13 @@ function MainBody(props) {
     if (e.key === "Enter") {
       if (displayConsoleInput === false) {
         setDisplayConsoleInput(true);
-        props.changeHomeMenuDisplay((e.target.displayHomeMenu = false));
-        props.changeAboutSectionDisplay((e.target.displayAboutSection = false));
-        props.changeProjectSectionDisplay(
-          (e.target.displayProjectSection = false)
-        );
-        props.changeContactSectionDisplay(
-          (e.target.displayContactSection = false)
-        );
+        handleConsoleEnabled(props, e);
       } else if (displayConsoleInput === true) {
         setDisplayConsoleInput(false);
-        props.changeHomeMenuDisplay((e.target.displayHomeMenu = true));
-        props.changeAboutSectionDisplay((e.target.displayAboutSection = false));
-        props.changeProjectSectionDisplay(
-          (e.target.displayProjectSection = false)
-        );
-        props.changeContactSectionDisplay(
-          (e.target.displayContactSection = true)
-        );
+        handleHome(props, e);
       }
+    } else {
+      handleKeystrokeInput(props, e);
     }
   };
 

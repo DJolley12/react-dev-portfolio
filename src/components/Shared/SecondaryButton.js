@@ -2,7 +2,6 @@ import React from "react";
 
 function SecondaryButton(props) {
   function handleClick() {
-    console.log("stuff i love clicked");
   }
   return (
     <a
