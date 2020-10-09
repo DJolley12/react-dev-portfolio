@@ -2,7 +2,7 @@
   caret-color: transparent;
   font-size: 70%;
   background-color: transparent;
-  top: 15%;
+  top: 30%;
 }
 #console_input::after {
   content: "";
@@ -12,6 +12,12 @@
   border-right: 0.5vw solid #30c31c;
   animation: blink 1s infinite ease;
 }
-#help_heading {
+#help_info {
+  top: 5%;
+}
+.help_menu {
   font-size: 85%;
+}
+#help_table {
+  top: 10%;
 }

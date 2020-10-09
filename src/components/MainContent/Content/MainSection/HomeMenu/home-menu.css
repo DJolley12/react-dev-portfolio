@@ -1,0 +1,11 @@
+#home_menu {
+  animation: homeMenuFadeIn 2s ease;
+}
+@keyframes homeMenuFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}

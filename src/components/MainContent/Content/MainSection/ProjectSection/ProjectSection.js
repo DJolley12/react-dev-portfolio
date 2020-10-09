@@ -77,26 +77,26 @@ function ProjectSection() {
   const [projectHover, setProjectHover] = useState(false);
 
   return (
-    <div className="container-flex">
+    <div className="container-flex layer-top main_border">
       <div className="row">
         <div className="col-md-4"></div>
         <h4 className="heading col-md-4 layer-top">My Work</h4>
         <div className="col-md-4"></div>
       </div>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex">
         <ProjectCard
           content={quickTourneys}
           hovered={projectHover}
           onMouseEnter={() => setProjectHover(true)}
           onMouseLeave={() => setProjectHover(false)}
         />
-        {/* <ProjectCard
+        <ProjectCard
           content={codWrapperContent}
           hovered={projectHover}
           onMouseEnter={() => setProjectHover(true)}
           onMouseLeave={() => setProjectHover(false)}
         />
-        <ProjectCard
+        {/* <ProjectCard
           content={ucContent}
           hovered={projectHover}
           onMouseEnter={() => setProjectHover(true)}

@@ -224,6 +224,17 @@
   border-right: 0.5vw solid #30c31c;
   animation: blink 1s infinite ease;
 }
+.main_border {
+  border-left: 4px dashed #30c31c;
+  border-right: 4px dashed #30c31c;
+  border-top: 4px solid #30c31c;
+  border-bottom: 4px solid #30c31c;
+  margin-right: 20%;
+  margin-left: 17%;
+  margin-top: 15vh;
+  height: 60vh;
+  width: 65vw;
+}
 .main_content {
   height: 100vh;
   position: relative;

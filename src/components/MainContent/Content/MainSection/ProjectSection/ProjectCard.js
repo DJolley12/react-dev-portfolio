@@ -10,7 +10,7 @@ function ProjectCard(props) {
   console.log(props.content);
 
   return (
-    <div className="d-flex justify-content-lg-center project_card layer-top">
+    <div className="flex-fill project_card layer-top">
       <div className="row">
         <p className="text-align-left" style={{ paddingLeft: "1rem" }}>
           {props.content.heading}

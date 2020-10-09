@@ -1,21 +1,27 @@
 import React from "react";
+import SecondaryButton from "../../../../Shared/SecondaryButton"
+import "./home-menu.css"
 
-const mainBorderStyle = {
-  borderLeft: "4px dashed #30c31c",
-  borderRight: "4px dashed #30c31c",
-  borderTop: "4px solid #30c31c",
-  borderBottom: "4px solid #30c31c",
-  marginRight: "20%",
-  marginLeft: "17%",
-  marginTop: "15vh",
-  height: "60vh",
-  width: "65vw",
+const homeCommandButton = {
+  buttonText: "H home menu",
+  class: "home_command_button",
+  styles: {
+    position: "absolute",
+    top: "45vh",
+    left: "1vw",
+  },
 };
 
 function HomeMenu(props) {
   return(
-    <div className="layer-top" style={mainBorderStyle}>
-
+    <div id="home_menu" className="layer-top main_border">
+      <SecondaryButton content={homeCommandButton}/>
+      {/* <SecondaryButton />
+      <SecondaryButton />
+      <SecondaryButton />
+      <SecondaryButton />
+      <SecondaryButton />
+      <SecondaryButton /> */}
     </div>
   );
 }
