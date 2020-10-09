@@ -43,8 +43,8 @@ const stuffILoveContent = {
   class: "about_section_button",
   styles: {
     position: "absolute",
-    top: "50vh",
-    left: "2vw",
+    top: "52vh",
+    left: "1vw",
   },
 };
 
@@ -53,8 +53,8 @@ const myTechStackContent = {
   class: "about_section_button",
   styles: {
     position: "absolute",
-    top: "50vh",
-    left: "20vw",
+    top: "45vh",
+    left: "1vw",
   },
 };
 

@@ -7,7 +7,7 @@ function ConsoleInput(props) {
   let placeholder = "C:\\>";
   return (
     <>
-      <h4 className="layer-top main_text_color">Enter Help For Commands</h4>
+      <h4 id="help_heading" className="layer-top main_text_color">Enter Help For Commands</h4>
       <div
         className="layer-top console_input main_text_color"
         id="console_input"

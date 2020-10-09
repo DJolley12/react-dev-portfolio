@@ -52,6 +52,7 @@ function Header(props) {
         />
       )}
       {props.displayMainSection && (
+        <>
         <MainBody
           displayHomeMenu={displayHomeMenu}
           displayAboutSection={displayAboutSection}
@@ -64,6 +65,7 @@ function Header(props) {
           changeProjectSectionDisplay={changeProjectSectionDisplay}
           changeContactSectionDisplay={changeContactSectionDisplay}
         />
+        </>
       )}
     </header>
   );

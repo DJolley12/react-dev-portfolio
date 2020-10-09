@@ -73,6 +73,10 @@ function handleInput(props) {
           (e.target.displayContactSection = true)
         );
         props.changeConsoleInputDisplay((e.target.displayConsoleInput = false));
+      } else if (
+        text.substring(4, text.length).trim().toLowerCase() === "help"
+      ) {
+        //handle help command 
       } else if (text.substring(4, text.length).trim().toLowerCase() === "") {
         props.changeHomeMenuDisplay((e.target.displayHomeMenue = true));
         props.changeConsoleInputDisplay((e.target.displayConsoleInput = false));

@@ -12,3 +12,6 @@
   border-right: 0.5vw solid #30c31c;
   animation: blink 1s infinite ease;
 }
+#help_heading {
+  font-size: 85%;
+}
