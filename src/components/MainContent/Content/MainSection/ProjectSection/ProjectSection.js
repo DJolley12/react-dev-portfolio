@@ -14,6 +14,9 @@ const quickTourneys = {
     // "MySQL",
     // "JQuery",
   ],
+  styles: {
+    left: "2.5%"
+  }
 };
 
 const codWrapperContent = {
@@ -22,6 +25,9 @@ const codWrapperContent = {
   description2:
     ".NET Standard Class Library wrapper for Call of Duty's API. I decided to write this after I had a freelance project to do with it, and didn't see any other work on this in C#. Would've saved me a bunch of time!",
   languages: ["C#"],
+  styles: {
+    left: "35%"
+  }
 };
 
 const ucContent = {
@@ -39,6 +45,9 @@ const ucContent = {
     // "Bootstrap",
     // "Entity Framework",
   ],
+  styles: {
+    left: "67.5%"
+  }
 };
 
 const siteContent = {
@@ -55,6 +64,7 @@ const siteContent = {
     "NES.css",
     "(I love frameworks/libraries, can you tell?)",
   ],
+  
 };
 
 const dbBackup = {
@@ -96,12 +106,12 @@ function ProjectSection() {
           onMouseEnter={() => setProjectHover(true)}
           onMouseLeave={() => setProjectHover(false)}
         />
-        {/* <ProjectCard
+        <ProjectCard
           content={ucContent}
           hovered={projectHover}
           onMouseEnter={() => setProjectHover(true)}
           onMouseLeave={() => setProjectHover(false)}
-        /> */}
+        />
       </div>
       {/* <div className="d-flex justify-content-center">
         <ProjectCard

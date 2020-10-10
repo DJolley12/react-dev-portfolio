@@ -7,10 +7,9 @@ function ProjectCard(props) {
     : props.content.description1;
 
   console.log(props.hovered);
-  console.log(props.content);
-
+  
   return (
-    <div className="flex-fill project_card layer-top">
+    <div className="project_card layer-top" style={props.content.styles}>
       <div className="row">
         <p className="text-align-left" style={{ paddingLeft: "1rem" }}>
           {props.content.heading}
