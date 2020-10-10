@@ -1,7 +1,13 @@
 import React from "react";
 
 function SecondaryButton(props) {
-  function handleClick() {
+  console.log(props);
+  function handleClick(event) {
+    for (let index = 0; index < props.callBacks.length; index++) {
+      let targetValue = props.targets[index]
+      props.callBacks[index]((event.target.targetValue = props.values[index]));
+  
+    }
   }
   return (
     <a

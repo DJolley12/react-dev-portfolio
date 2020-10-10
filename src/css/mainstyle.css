@@ -107,6 +107,7 @@
   text-align: left;
   z-index: 9999;
   opacity: 0.7;
+  word-break: break-all;
 }
 .btn-group-lg > .btn,
 .btn-lg {
@@ -245,7 +246,7 @@
   height: 30vh;
   width: 30.3%;
   background-color: #30c31c;
-  opacity: 0.4;
+  opacity: 0.7;
   top: 20%;
   font-size: 85%;
 }

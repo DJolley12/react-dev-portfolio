@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AboutHeading from "./AboutHeading";
 import AboutDescription from "./AboutDescription";
 import "./about_section.css";
@@ -48,6 +48,23 @@ const myTechStackContent = {
 };
 
 function AboutSection() {
+
+  const [displayAboutDescription, setDisplayAboutDescription] = useState(true);
+  const [displayStuffILove, setDisplayStuffILove] = useState(false);
+  const [displayTechStack, setDisplayTechStack] = useState(false);
+
+  function changeAboutDescription(newDisplay) {
+    setDisplayAboutDescription(newDisplay);
+  }
+
+  function changeDisplayStuffILove(newDisplay) {
+    setDisplayStuffILove(newDisplay);
+  }
+
+  function changeDisplayTechStack(newDisplay) {
+    setDisplayTechStack(newDisplay);
+  }
+
   return (
     <div
       className="container-flex layer-top main_border"
@@ -55,9 +72,14 @@ function AboutSection() {
       
     >
       <AboutHeading />
-      <AboutDescription text1={aboutDescription.description} />
-      <SecondaryButton content={stuffILoveContent} />
-      <SecondaryButton content={myTechStackContent} />
+      {displayAboutDescription && <AboutDescription text1={aboutDescription.description} />}
+      <SecondaryButton 
+        content={stuffILoveContent} 
+        callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
+        targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
+        values={[false, true, false]}
+      />
+      {/* <SecondaryButton content={myTechStackContent} /> */}
     </div>
   );
 }

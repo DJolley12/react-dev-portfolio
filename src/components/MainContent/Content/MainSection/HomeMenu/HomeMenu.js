@@ -2,6 +2,7 @@ import React from "react";
 import SecondaryButton from "../../../../Shared/SecondaryButton"
 import "./home-menu.css"
 import HomeHeading from "./HomeHeading";
+import KeyCommand from "./KeyCommand";
 
 const homeCommandButton = {
   buttonText: "H home menu",
@@ -47,10 +48,10 @@ function HomeMenu(props) {
   return(
     <div id="home_menu" className="layer-top main_border">
       <HomeHeading /> 
-      <SecondaryButton content={homeCommandButton}/>
-      <SecondaryButton content={aboutCommandButton}/>
-      <SecondaryButton content={myWorkCommandButton}/>
-      <SecondaryButton content={contactCommandButton}/>
+      <KeyCommand content={homeCommandButton}/>
+      <KeyCommand content={aboutCommandButton}/>
+      <KeyCommand content={myWorkCommandButton}/>
+      <KeyCommand content={contactCommandButton}/>
       {/*<SecondaryButton />
       <SecondaryButton />
       <SecondaryButton /> */}
