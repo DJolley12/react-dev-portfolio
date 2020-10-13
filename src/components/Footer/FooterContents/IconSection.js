@@ -5,7 +5,7 @@ const iconSectionStyles = {
   width: "50%",
   zIndex: "9999",
   paddingLeft: "5%",
-  top: "100%",
+  top: "104%",
 };
 
 function IconSection() {

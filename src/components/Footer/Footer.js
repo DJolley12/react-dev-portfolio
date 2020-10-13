@@ -17,7 +17,7 @@ function Footer() {
           className="d-flex justify-content-center main_text_color layer-top"
           id="made_by_section"
         >
-          Made by Daniel Jolley with{" "}
+          Made by Daniel Jolley with
           <i class="nes-icon is-medium heart" style={nesIconStyles}></i>
         </p>
       </div>

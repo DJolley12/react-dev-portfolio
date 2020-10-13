@@ -8,7 +8,7 @@ const quickTourneys = {
     "Client wanted a solution that would pull data during a tournament with live updates, and the best determined solution was an api wrapper implementation. This is also what inspired me to write the open source wrapper, as there were no API wrappers in C#.",
   languages: [
     "C#",
-    // "JavaScript",
+    "JavaScript",
     // "ASP.NET Core",
     // "Bootstrap",
     // "MySQL",

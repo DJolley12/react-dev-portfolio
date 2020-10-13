@@ -4,6 +4,7 @@ import AboutDescription from "./AboutDescription";
 import "./about_section.css";
 import SecondaryButton from "../../../../Shared/SecondaryButton";
 import NavBar from "../../../Content/NavBar";
+import StuffILove from "./StuffILove";
 
 // const aboutDescription = {
 //   description:
@@ -47,6 +48,16 @@ const myTechStackContent = {
   },
 };
 
+const backToAboutContent = {
+  buttonText: "_back_to_about",
+  class: "about_section_button",
+  styles: {
+    position: "absolute",
+    top: "59vh",
+    left: "1vw",
+  },
+};
+
 function AboutSection() {
 
   const [displayAboutDescription, setDisplayAboutDescription] = useState(true);
@@ -73,13 +84,26 @@ function AboutSection() {
     >
       <AboutHeading />
       {displayAboutDescription && <AboutDescription text1={aboutDescription.description} />}
+      {displayStuffILove && <StuffILove />}
       <SecondaryButton 
         content={stuffILoveContent} 
         callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
         targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
         values={[false, true, false]}
       />
-      {/* <SecondaryButton content={myTechStackContent} /> */}
+      <SecondaryButton 
+        content={myTechStackContent}
+        callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
+        targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
+        values={[false, false, true]}
+      />
+      
+      {!displayAboutDescription && <SecondaryButton
+        content={backToAboutContent} 
+        callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
+        targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
+        values={[true, false, true]}
+      />}
     </div>
   );
 }

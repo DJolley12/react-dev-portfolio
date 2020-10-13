@@ -167,7 +167,7 @@
 }
 .nav_bar {
   position: absolute;
-  top: 85vh;
+  top: 92vh;
   left: 27%;
   align-self: center;
 }
@@ -231,11 +231,11 @@
   border-right: 4px dashed #30c31c;
   border-top: 4px solid #30c31c;
   border-bottom: 4px solid #30c31c;
-  margin-right: 20%;
+  right: 12.5%;
   margin-left: 17%;
   margin-top: 15vh;
-  height: 60vh;
-  width: 65vw;
+  height: 70vh;
+  width: 75vw;
 }
 .main_content {
   height: 100vh;
@@ -255,10 +255,10 @@
   width: 10vw;
 }
 #made_by_section {
-  padding-top: 6.5vh;
+  /* padding-top: 6.5vh; */
   left: 32.5%;
   margin: auto;
-  top: 115%;
+  top: 122.3%;
 }
 @keyframes blink {
   0% {
