@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import AboutSection from "./Content/MainSection/AboutSection/AboutSection";
 import ConsoleInput from "../ConsoleInput/ConsoleInput";
+import ContactSection from "./Content/MainSection/ContactSection/ContactSection"
 import HomeMenu from "./Content/MainSection/HomeMenu/HomeMenu";
 import InfoHeading from "./Content/MainSection/InfoHeading";
 import MainSection from "./Content/MainSection/MainSection";
@@ -40,7 +41,7 @@ function MainBody(props) {
       {props.displayHomeMenu && <HomeMenu />}
       {props.displayAboutSection && <AboutSection />}
       {props.displayProjectSection && <ProjectSection />}
-      {/* {prop.displayContactSection && <ContactSection />} */}
+      {props.displayContactSection && <ContactSection />}
       {displayConsoleInput && (
         <ConsoleInput
           displayHomeMenu={props.displayHomeMenu}

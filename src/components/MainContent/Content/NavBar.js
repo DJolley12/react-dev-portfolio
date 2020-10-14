@@ -8,7 +8,7 @@ function NavBar(props) {
       (event.target.displayProjectSection = false)
     );
     props.changeContactSectionDisplay(
-      (event.target.displayContactSection = true)
+      (event.target.displayContactSection = false)
     );
   }
 
@@ -19,7 +19,7 @@ function NavBar(props) {
       (event.target.displayProjectSection = false)
     );
     props.changeContactSectionDisplay(
-      (event.target.displayContactSection = true)
+      (event.target.displayContactSection = false)
     );
   }
 
