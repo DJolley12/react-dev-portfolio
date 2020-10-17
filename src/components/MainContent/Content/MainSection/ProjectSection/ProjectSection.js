@@ -9,7 +9,7 @@ const quickTourneys = {
   languages: [
     "C#",
     "JavaScript",
-    // "ASP.NET Core",
+    "ASP.NET Core",
     // "Bootstrap",
     // "MySQL",
     // "JQuery",
@@ -86,6 +86,16 @@ const dbBackup = {
 function ProjectSection() {
   const [projectHover, setProjectHover] = useState(false);
 
+  function project1MouseEnter(event) {
+    console.log("project hovered");
+    console.log(event);
+  }
+
+  function project1MouseLeave(event) {
+    console.log("project unhovered");
+    console.log(event);
+  }
+
   return (
     <div className="container-flex layer-top main_border">
       <div className="row">
@@ -94,37 +104,38 @@ function ProjectSection() {
         <div className="col-md-4"></div>
       </div>
       <div className="d-flex">
+        {projectHover && console.log("project hovered")}
         <ProjectCard
           content={quickTourneys}
           hovered={projectHover}
-          onMouseEnter={() => setProjectHover(true)}
-          onMouseLeave={() => setProjectHover(false)}
+          onEnterCallback={project1MouseEnter}
+          onLeaveCallback={project1MouseLeave}
         />
-        <ProjectCard
+        {/* <ProjectCard
           content={codWrapperContent}
           hovered={projectHover}
-          onMouseEnter={() => setProjectHover(true)}
-          onMouseLeave={() => setProjectHover(false)}
+          onEnterCallback={}
+          onLeaveCallback={}
         />
         <ProjectCard
           content={ucContent}
           hovered={projectHover}
-          onMouseEnter={() => setProjectHover(true)}
-          onMouseLeave={() => setProjectHover(false)}
-        />
-      </div>
+          onEnterCallback={}
+          onLeaveCallback={}
+        />*/}
+      </div> 
       {/* <div className="d-flex justify-content-center">
         <ProjectCard
           content={dbBackup}
           hovered={projectHover}
-          onMouseEnter={() => setProjectHover(true)}
-          onMouseLeave={() => setProjectHover(false)}
+          onEnterCallback={}
+          onLeaveCallback={}
         />
         <ProjectCard
           content={siteContent}
           hovered={projectHover}
-          onMouseEnter={() => setProjectHover(true)}
-          onMouseLeave={() => setProjectHover(false)}
+          onEnterCallback={}
+          onLeaveCallback={}
         />
       </div> */}
     </div>

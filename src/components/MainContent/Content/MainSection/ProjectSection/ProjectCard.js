@@ -6,10 +6,23 @@ function ProjectCard(props) {
     ? props.content.description2
     : props.content.description1;
 
-  console.log(props.hovered);
+    function handleMouseEnter(event) {
+      let targetValue = props.targetValue;
+      props.onEnterCallback((event.target.targetValue = true));
+     }
+
+     function handleMouseLeave(event) {
+        let targetValue = props.targetValue;
+        props.onLeaveCallback((event.target.targetValue = false));
+    
+     }
   
   return (
-    <div className="project_card layer-top" style={props.content.styles}>
+    <div className="project_card layer-top" 
+    style={props.content.styles}
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}    
+    >
       <div className="row">
         <p className="text-align-left" style={{ paddingLeft: "1rem" }}>
           {props.content.heading}

@@ -14,28 +14,41 @@ import "./code-badge.css";
 
 function CodeBadge(props) {
   const languages = [];
+  let codeBadgeCount = 0;
   for (let index = 0; index < props.content.languages.length; index++) {
     const language = props.content.languages[index];
+    console.log(codeBadgeCount)
 
     let styles;
     if (index !== 0) {
-      let controlNumber = index / 2;
-      if (Math.round(controlNumber) === (index / 2)) {
+      if (codeBadgeCount === 0) {
+        console.log("one");
         styles = {
           left: "5%",
           top: "0%"
         }
-      } else {
+        codeBadgeCount++;
+      } else if (styles === 1) {
+        console.log("two");
         styles = {
-          left: "8%",
+          left: "11%",
           top: "0%"
         }
+        codeBadgeCount++;
+      } else if (styles === 2) {
+        console.log("three");
+        styles = {
+          left: "18%",
+          top: "0%"
+        }
+        codeBadgeCount = 0;
       }
-    } else {
+    } else if (index === 0) {
       styles = {
         left: "5%",
         top: "0%"
       }
+      codeBadgeCount++;
     } 
 
 
