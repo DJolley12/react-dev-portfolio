@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import TypingComponent from "../../../../Shared/TypingComponent/TypingComponent"
 
 const quickTourneys = {
   heading: "Quick Tourneys Gaming",
   description1: "Website for hosting Call of Duty Warzone tournaments. ",
   description2:
-    "Client wanted a solution that would pull data during a tournament with live updates, and the best determined solution was an api wrapper implementation. This is also what inspired me to write the open source wrapper, as there were no API wrappers in C#.",
+    ["Client wanted a solution that would pull data during a tournament with live updates, ", "and the best determined solution was an api wrapper implementation. ", "This is also what inspired me to write the open source wrapper, ", "as there were no API wrappers in C#."],
   languages: [
     "C#",
     "JavaScript",
@@ -84,38 +85,65 @@ const dbBackup = {
 };
 
 function ProjectSection() {
-  const [projectHover, setProjectHover] = useState(false);
+  const [projectHoveredContent, setProjectHoveredContent] = useState();
+  const [projectIsHovered, setProjectIsHovered] = useState(false);
 
-  function project1MouseEnter(event) {
+  function quickTourneysMouseEnter(event) {
     console.log("project hovered");
     console.log(event);
+    setProjectIsHovered(event);
+    setProjectHoveredContent(quickTourneys.description2);
   }
 
-  function project1MouseLeave(event) {
+  function quickTourneysMouseLeave(event) {
     console.log("project unhovered");
     console.log(event);
+    setProjectIsHovered(event);
+    setProjectHoveredContent();
+  }
+
+  function codWrapperMouseEnter(event) {
+    setProjectIsHovered(event);
+    setProjectHoveredContent(quickTourneys.description2);
+  }
+
+  function codWrapperMouseLeave(event) {
+    
+  }
+
+  const TypingComponentStyles = {
+
   }
 
   return (
+    <>
+    {projectIsHovered && <TypingComponent 
+          classString="main_text_color layer-top"
+          text1={projectHoveredContent}
+          typingContentElementId="project_hovered_typing_component"
+          styles={TypingComponentStyles}
+        />}
     <div className="container-flex layer-top main_border">
-      <div className="row">
-        <div className="col-md-4"></div>
-        <h4 className="heading col-md-4 layer-top">My Work</h4>
-        <div className="col-md-4"></div>
-      </div>
+        <h4 className="heading bottom-border">My Work</h4>
+      
       <div className="d-flex">
-        {projectHover && console.log("project hovered")}
+        {/* {projectIsHovered && <TypingComponent 
+          classString="main_text_color"
+          text1={projectHoveredContent}
+          typingContentElementId="project_hovered_typing_component"
+          styles={TypingComponentStyles}
+        />} */}
         <ProjectCard
           content={quickTourneys}
-          hovered={projectHover}
-          onEnterCallback={project1MouseEnter}
-          onLeaveCallback={project1MouseLeave}
+          hovered={projectIsHovered}
+          callback={quickTourneysMouseEnter}
+          hovered={projectIsHovered}
         />
         {/* <ProjectCard
           content={codWrapperContent}
           hovered={projectHover}
-          onEnterCallback={}
-          onLeaveCallback={}
+          onEnterCallback={codWrapperMouseEnter}
+          onLeaveCallback={codWrapperMouseLeave}
         />
         <ProjectCard
           content={ucContent}
@@ -139,6 +167,7 @@ function ProjectSection() {
         />
       </div> */}
     </div>
+    </>
   );
 }
 

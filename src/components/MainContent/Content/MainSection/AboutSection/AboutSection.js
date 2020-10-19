@@ -5,6 +5,7 @@ import "./about_section.css";
 import SecondaryButton from "../../../../Shared/SecondaryButton";
 import NavBar from "../../../Content/NavBar";
 import StuffILove from "./StuffILove";
+import TechStack from "./TechStack"
 
 // const aboutDescription = {
 //   description:
@@ -34,7 +35,7 @@ const stuffILoveContent = {
   styles: {
     position: "absolute",
     top: "59vh",
-    left: "10vw",
+    left: "18vw",
   },
 };
 
@@ -54,7 +55,7 @@ const backToAboutContent = {
   styles: {
     position: "absolute",
     top: "59vh",
-    left: "18vw",
+    left: "35vw",
   },
 };
 
@@ -85,6 +86,7 @@ function AboutSection() {
       <AboutHeading />
       {displayAboutDescription && <AboutDescription text1={aboutDescription.description} />}
       {displayStuffILove && <StuffILove />}
+      {displayTechStack && <TechStack/>}
       <SecondaryButton 
         content={stuffILoveContent} 
         callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
