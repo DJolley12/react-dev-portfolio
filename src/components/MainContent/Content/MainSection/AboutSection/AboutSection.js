@@ -5,7 +5,7 @@ import "./about_section.css";
 import SecondaryButton from "../../../../Shared/SecondaryButton";
 import NavBar from "../../../Content/NavBar";
 import StuffILove from "./StuffILove";
-import TechStack from "./TechStack"
+import TechStack from "./TechStack/TechStack"
 
 // const aboutDescription = {
 //   description:
@@ -104,7 +104,7 @@ function AboutSection() {
         content={backToAboutContent} 
         callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
         targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
-        values={[true, false, true]}
+        values={[true, false, false]}
       />}
     </div>
   );

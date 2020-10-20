@@ -1,0 +1,39 @@
+.bar {
+  border: 2px solid #30c31c;
+  width: 80%;
+  margin-left: 3%;
+  height: 5.9%;
+  margin-top: 1.3%;
+}
+.bar_inner {
+  background-color: #30c31c;
+  margin-top: 0.4vh;
+  margin-bottom: 0.4vh;
+  margin-left: 0.5%;
+}
+.tag {
+  opacity: 0.5;
+  background-color: black;
+  color: #30c31c;
+  width: 10vw;
+  font-size: 70%;
+  text-align: center;
+}
+#c_sharp_inner {
+  width: 90%;
+}
+#ef_inner {
+  width: 70%;
+}
+#sql_inner {
+  width: 70%;
+}
+#javascript_inner {
+  width: 87%;
+}
+#html_inner {
+  width: 85%;
+}
+#css_inner {
+  width: 85%;
+}
