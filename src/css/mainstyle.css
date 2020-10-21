@@ -164,6 +164,7 @@
   padding-bottom: 0.15rem;
   outline: none;
   z-index: 10000;
+  font-size: 85%;
 }
 .nav_bar {
   position: absolute;
