@@ -142,6 +142,7 @@ function StuffILove() {
         changeDisplayVSCode(false);
         changeDisplayVisualStudio(false);
         changeDisplayCyberpunkTheme(false);
+        changeDisplaySynthwave84Theme(false);
         changeDisplayDisplayPrettier(false);
         changeDisplayLiveServer(false);
         changeDisplayGitHub(false);
