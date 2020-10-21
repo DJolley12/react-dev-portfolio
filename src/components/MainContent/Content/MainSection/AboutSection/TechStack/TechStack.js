@@ -21,7 +21,7 @@ function TechStack() {
           position: "absolute",
           top: "10vh",
           left: "15vw",
-          height: "3vh"
+          height: "2.8vh"
         },
       }
 
@@ -33,7 +33,7 @@ function TechStack() {
             position: "absolute",
             top: "10vh",
             left: "15vw",
-            height: "3vh"
+            height: "2.8vh"
           },
         };
 
@@ -44,7 +44,7 @@ function TechStack() {
               position: "absolute",
               top: "10vh",
               right: "15vw",
-              height: "3vh"
+              height: "2.8vh"
             },
           }
     
@@ -56,7 +56,7 @@ function TechStack() {
                 position: "absolute",
                 top: "10vh",
                 right: "15vw",
-                height: "3vh"
+                height: "2.8vh"
               },
             };
     
