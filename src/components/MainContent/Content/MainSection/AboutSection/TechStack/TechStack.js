@@ -15,7 +15,7 @@ function TechStack() {
     }
     
       const backendContent = {
-        buttonText: "_backend_languages",
+        buttonText: "_backend",
         class: "",
         styles: {
           position: "absolute",
@@ -26,7 +26,7 @@ function TechStack() {
       }
 
       const backendSelectedContent = {
-          buttonText: "_backend_languages",
+          buttonText: "_backend",
           class: "",
           styles: {
             opacity: ".5",
@@ -38,7 +38,7 @@ function TechStack() {
         };
 
         const frontendContent = {
-            buttonText: "_frontend_languages",
+            buttonText: "_frontend",
             class: "",
             styles: {
               position: "absolute",
@@ -49,7 +49,7 @@ function TechStack() {
           }
     
           const frontendSelectedContent = {
-              buttonText: "_frontend_languages",
+              buttonText: "_frontend",
               class: "",
               styles: {
                 opacity: ".5",
@@ -91,6 +91,16 @@ function TechStack() {
                 </div>
             </div>
             <div className="bar">
+            <div id="winforms_inner" className="bar_inner">
+                    <div className="tag">WinForms</div>
+                </div>
+            </div>
+            <div className="bar">
+                <div id="razor_inner" className="bar_inner">
+                    <div className="tag">Razor Pages</div>
+                </div>
+            </div>
+            <div className="bar">
                 <div id="ef_inner" className="bar_inner">
                     <div className="tag">Entity Framework</div>
                 </div>
@@ -115,6 +125,16 @@ function TechStack() {
             <div className="bar">
                 <div id="javascript_inner" className="bar_inner">
                     <div className="tag">JavaScript</div>
+                </div>
+            </div>
+            <div className="bar">
+                <div id="react_inner" className="bar_inner">
+                    <div className="tag">React</div>
+                </div>
+            </div>
+            <div className="bar">
+                <div id="blazor_inner" className="bar_inner">
+                    <div className="tag">Blazor</div>
                 </div>
             </div>
             <div className="bar">
