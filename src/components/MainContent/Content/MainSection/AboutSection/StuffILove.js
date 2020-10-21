@@ -7,7 +7,8 @@ function StuffILove() {
     //state hooks
     const [displayVSCode, setDisplayVSCode] = useState(false);
     const [displayVisualStudio, setDisplayVisualStudio] = useState(false);
-    const [displayCyberpunkTheme, setDisplayCyberpunkThem] = useState(false);
+    const [displayCyberpunkTheme, setDisplayCyberpunkTheme] = useState(false);
+    const [displaySynthwave84Theme, setDisplaySynthwave84Theme] = useState(false);
     const [displayBackButton, setDisplayBackButton] = useState(false);
     const [displayPrettier, setDisplayPrettier] = useState(false);
     const [displayLiveServer, setDisplayLiveServer] = useState(false);
@@ -28,7 +29,11 @@ function StuffILove() {
     }
 
     function changeDisplayCyberpunkTheme(newDisplay) {
-        setDisplayCyberpunkThem(newDisplay);
+        setDisplayCyberpunkTheme(newDisplay);
+    }
+
+    function changeDisplaySynthwave84Theme(newDisplay) {
+        setDisplaySynthwave84Theme(newDisplay);
     }
 
     function changeDisplayBackButton(newDisplay) {
@@ -82,6 +87,12 @@ function StuffILove() {
 
     function handleCyberpunkThemeClick() {
         changeDisplayCyberpunkTheme(true);
+        changeDisplayBackButton(true);
+        changeDisplayMenu(false);
+    }
+
+    function handleSynthwave84ThemeClick() {
+        changeDisplaySynthwave84Theme(true);
         changeDisplayBackButton(true);
         changeDisplayMenu(false);
     }
@@ -174,7 +185,7 @@ function StuffILove() {
                 </div>
                 <div className="row">
                     <div className="main_text_color col-sm" onClick={handleCyberpunkThemeClick} style={underlineStyle}>Cyberpunk: VS Code Theme</div>
-                    <div className="main_text_color col-sm" onClick={handlePrettierClick} style={underlineStyle}>Prettier</div>
+                    <div className="main_text_color col-sm" onClick={handleSynthwave84ThemeClick} style={underlineStyle}>Synthwave '84: VS Code Theme</div>
                 </div> 
                 <div className="row">
                     <div className="main_text_color col-sm" onClick={handleLiveServerClick} style={underlineStyle}>Live Server</div>
@@ -188,11 +199,15 @@ function StuffILove() {
                     <div className="main_text_color col-sm" onClick={handleSpotifyClick} style={underlineStyle}>Spotify</div>
                     <div className="main_text_color col-sm" onClick={handleEZBlockerClick} style={underlineStyle}>EZBlocker</div>
                 </div>
+                <div className="row">
+                    <div className="main_text_color col-sm" onClick={handlePrettierClick} style={underlineStyle}>Prettier</div>
+                </div>
             </>}
             {displayBackButton && <div className="secondary_button" onClick={handleBackButtonClick} style={backButtonStyle}>Back</div>}
             {displayVSCode && <p className="main_text_color" style={paragraphStyle}>This is simply my favorite text editor, and in my opinion, the best our there. It has so many useful features and you can configure it to suite just about any project. For frontend development, I use this almost exclusively, because it is lightweight enough, that it's snappy, but also has all the linting and other features you could possible need. It is also cross platform and open source, which makes it great if you need something that is available on Windows, Mac, and Linux. There is also a large community contributing to the editor, so extensions are very abundant, and you can get debuggers and linting for practically any language you want. If you are a VIM user, you can even find a VIM extension.</p>}
             {displayVisualStudio && <p className="main_text_color" style={paragraphStyle}>For C#, there is simply nothing better. Life is so much easier with Visual Studio, as everything is constantly checked for you. Missing a using statement? Just ctrl + . and VS will add it for you. Need a package added? VS will even install it for you if it recognizes what you need. Navigating complex and large applications is also easy with this IDE. <br></br> There are also so many useful tools, including database, and GitHub tools integrated right into the IDE, as well as the ability to build, publish, etc.</p>}
             {displayCyberpunkTheme && <p className="main_text_color" style={paragraphStyle}>This theme gets me in the mood to write code, and I find myself more likely to stay up working because of it. I could stare at this theme for hours. It is so visually pleasing to me, that it actually makes me want to write more code, and I find myself sometimes using VS Code simply so I can have the theme. That said, it also has a lot of advantages, such as a high variety in it's color palette, making it easier to instantly recognize elements in code. It also has a brighter color for bracket section highlighting, which makes me get lost less easy. <br></br>Overall, the theme is easy on the eyes, but not so dark that it has too much contrast. This is my favorite theme I've found so far.</p>}
+            {displaySynthwave84Theme && <p className="main_text_color" style={paragraphStyle}>Enable Neon Dreams: enough said. This theme has an awesome glow to some of the elements with this enabled. It looks awesome, I highly recommend you check it out! The Visual Studio Marketplace has a description on how to enable neon dreams if you are interested.</p>}
             {displayPrettier && <p className="main_text_color" style={paragraphStyle}>This VS Code add-on is necessary. Once you add it you will miss it if you don't have it. Code gets messy, so having it autoformatted on save is awesome.</p>}
             {displayLiveServer && <p className="main_text_color" style={paragraphStyle}>While creating static HTML there is nothing better is my opinion than this add-on. It is a lot like the Brackets editor, where is allows auto refresh on save, so you don't need to refresh to display the changes you are making. It also allows you to easily display individual pages while creating them.</p>}
             {displayGitHub && <p className="main_text_color" style={paragraphStyle}>GitHub is my favorite source control. They have many features, and you no longer need to pay for private repositories, which erases their biggest previous downfall. <br></br> While others browse Facebook or Reddit, I'm browsing GitHub to see what fun or cool projects I can find, and there are so many awesome ideas other developers have done with CSS and JavaScript magic in their projects, that I get lost in wormholes and time pockets, and come out the other end wondering where 3 hours went.<br></br> I like the feel of the site, I like the ability to go find various open source packages easily, such as spotify ad blockers, or other useful tools.</p>}
