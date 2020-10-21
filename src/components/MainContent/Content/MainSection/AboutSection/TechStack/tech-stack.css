@@ -18,21 +18,78 @@
   font-size: 70%;
   text-align: center;
 }
+.language_section {
+  margin-top: 10vh;
+}
+@keyframes expandCSharp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes expandEF {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes expandSQL {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes expandJS {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 87%;
+  }
+}
+@keyframes expandHTML {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+@keyframes expandCSS {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
 #c_sharp_inner {
   width: 90%;
+  animation: expandCSharp 1.2s;
 }
 #ef_inner {
   width: 70%;
+  animation: expandEF 1.2s;
 }
 #sql_inner {
   width: 70%;
+  animation: expandSQL 1.2s;
 }
 #javascript_inner {
   width: 87%;
+  animation: expandJS 1.2s;
 }
 #html_inner {
   width: 85%;
+  animation: expandHTML 1.2s;
 }
 #css_inner {
   width: 85%;
+  animation: expandCSS 1.2s;
 }

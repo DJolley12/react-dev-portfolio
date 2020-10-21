@@ -29,7 +29,18 @@ const aboutDescription = {
   ],
 };
 
-const stuffILoveContent = {
+const stuffILoveContent1 = {
+  buttonText: "_stuff_i_love",
+  class: "about_section_button",
+  styles: {
+    opacity: ".5",
+    position: "absolute",
+    top: "59vh",
+    left: "18vw",
+  },
+};
+
+const stuffILoveContent2 = {
   buttonText: "_stuff_i_love",
   class: "about_section_button",
   styles: {
@@ -39,7 +50,18 @@ const stuffILoveContent = {
   },
 };
 
-const myTechStackContent = {
+const myTechStackContent1 = {
+  buttonText: "my_tech_stack",
+  class: "about_section_button",
+  styles: {
+    opacity: ".5",
+    position: "absolute",
+    top: "59vh",
+    left: "1vw",
+  },
+};
+
+const myTechStackContent2 = {
   buttonText: "my_tech_stack",
   class: "about_section_button",
   styles: {
@@ -87,18 +109,28 @@ function AboutSection() {
       {displayAboutDescription && <AboutDescription text1={aboutDescription.description} />}
       {displayStuffILove && <StuffILove />}
       {displayTechStack && <TechStack/>}
-      <SecondaryButton 
-        content={stuffILoveContent} 
+      {displayStuffILove ? <SecondaryButton 
+        content={stuffILoveContent1} 
         callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
         targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
         values={[false, true, false]}
-      />
-      <SecondaryButton 
-        content={myTechStackContent}
+      /> : <SecondaryButton 
+        content={stuffILoveContent2} 
+        callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
+        targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
+        values={[false, true, false]}
+        />}
+      {displayTechStack ? <SecondaryButton 
+        content={myTechStackContent1}
         callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
         targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
         values={[false, false, true]}
-      />
+      /> : <SecondaryButton 
+      content={myTechStackContent2}
+      callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
+      targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
+      values={[false, false, true]}
+    />}
       
       {!displayAboutDescription && <SecondaryButton
         content={backToAboutContent} 
