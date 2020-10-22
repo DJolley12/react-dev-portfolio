@@ -112,27 +112,25 @@ function ProjectSection() {
   }
 
   const TypingComponentStyles = {
-
+    fontSize: "70%",
+    top: "65%",
+    position: "fixed",
+    width: "70%",
+    left: "15%"
   }
 
   return (
     <>
-    {projectIsHovered && <TypingComponent 
+    {/* {projectIsHovered && <TypingComponent 
           classString="main_text_color layer-top"
           text1={projectHoveredContent}
           typingContentElementId="project_hovered_typing_component"
           styles={TypingComponentStyles}
-        />}
+        />} */}
     <div className="container-flex layer-top main_border">
         <h4 className="heading bottom-border">My Work</h4>
       
       <div className="d-flex">
-        {/* {projectIsHovered && <TypingComponent 
-          classString="main_text_color"
-          text1={projectHoveredContent}
-          typingContentElementId="project_hovered_typing_component"
-          styles={TypingComponentStyles}
-        />} */}
         <ProjectCard
           content={quickTourneys}
           hovered={projectIsHovered}
@@ -166,6 +164,12 @@ function ProjectSection() {
           onLeaveCallback={}
         />
       </div> */}
+      {projectIsHovered && <TypingComponent 
+          classString="main_text_color"
+          text1={projectHoveredContent}
+          typingContentElementId="project_hovered_typing_component"
+          styles={TypingComponentStyles}
+        />}
     </div>
     </>
   );
