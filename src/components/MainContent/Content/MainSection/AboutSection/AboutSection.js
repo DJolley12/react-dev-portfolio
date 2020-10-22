@@ -14,7 +14,7 @@ import TechStack from "./TechStack/TechStack"
 
 const aboutDescription = {
   description: [
-    "I am a Freelance Full Stack Developer, ",
+    "I am a Full Stack Developer, ",
     "with a consistent need to replace boredom with learning something new. ",
     "I have a strong background ",
     "in mainly Back-End and Desktop development, ",

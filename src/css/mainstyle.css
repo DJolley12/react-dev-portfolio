@@ -99,7 +99,7 @@
 .intro_text {
   color: #30c31c;
   font: bold;
-  font-size: 115%;
+  font-size: 95%;
   position: relative;
   margin-left: 10px;
   margin-bottom: 70px;
@@ -222,8 +222,8 @@
   content: "";
   position: absolute;
   margin-top: 0px;
-  height: 3.5vh;
-  border-right: 0.5vw solid #30c31c;
+  height: 2.9vh;
+  border-right: 0.47vw solid #30c31c;
   animation: blink 1s infinite ease;
 }
 .main_border {

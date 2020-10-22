@@ -4,6 +4,7 @@ import TypingComponent from "../../../../Shared/TypingComponent/TypingComponent"
 
 let aboutDescriptionStyles = {
   paddingLeft: "3%",
+  fontSize: "80%"
 };
 
 function AboutDescription(props) {

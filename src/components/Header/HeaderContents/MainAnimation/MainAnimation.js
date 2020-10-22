@@ -38,7 +38,7 @@ function MainAnimation(props) {
       <div className="text-left" id="main-animation">
         <span className="align-left">
           <h1
-            className="intro_text col-sm-8"
+            className="intro_text col-sm-9"
             id="intro_text"
             style={{ intro_text_styles }}
           ></h1>
