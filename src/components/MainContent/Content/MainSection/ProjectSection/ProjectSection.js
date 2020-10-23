@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./ProjectCard/ProjectCard"
 import TypingComponent from "../../../../Shared/TypingComponent/TypingComponent"
 
 const quickTourneys = {
@@ -11,9 +11,9 @@ const quickTourneys = {
     "C#",
     "JavaScript",
     "ASP.NET Core",
-    // "Bootstrap",
-    // "MySQL",
-    // "JQuery",
+    "Bootstrap",
+    "MySQL",
+    "JQuery",
   ],
   styles: {
     left: "2.5%"
@@ -24,7 +24,7 @@ const codWrapperContent = {
   heading: "CallOfDutyApiWrapper",
   description1: "Easy calls to the activision API in C#",
   description2:
-    ".NET Standard Class Library wrapper for Call of Duty's API. I decided to write this after I had a freelance project to do with it, and didn't see any other work on this in C#. Would've saved me a bunch of time!",
+    [".NET Standard Class Library wrapper", " for Call of Duty's API.", " I decided to write this", " after I had a freelance project to do with it,", " and didn't see any other work on this in C#.", " Would've saved me a bunch of time!"],
   languages: ["C#"],
   styles: {
     left: "35%"
@@ -36,15 +36,15 @@ const ucContent = {
   description1:
     "A live website-Razor Pages, C#, SQL, Entity Framework, Bootstrap",
   description2:
-    "I am currently still contributing to this site. To minimize complexity, Razor Pages and minimal JavaScript was used for mostly server side rendered content",
+    ["I am currently still contributing to this site.", " To minimize complexity,", " Razor Pages and minimal JavaScript was used", " for mostly server side rendered content"],
   languages: [
     "C#",
-    // "ASP.NET Core",
-    // "Razor Pages",
-    // "JavaScript",
-    // "JQuery",
-    // "Bootstrap",
-    // "Entity Framework",
+    "ASP.NET Core",
+    "Razor Pages",
+    "JavaScript",
+    "JQuery",
+    "Bootstrap",
+    "Entity Framework",
   ],
   styles: {
     left: "67.5%"
@@ -95,20 +95,18 @@ function ProjectSection() {
     setProjectHoveredContent(quickTourneys.description2);
   }
 
-  function quickTourneysMouseLeave(event) {
-    console.log("project unhovered");
-    console.log(event);
-    setProjectIsHovered(event);
-    setProjectHoveredContent();
-  }
-
   function codWrapperMouseEnter(event) {
     setProjectIsHovered(event);
-    setProjectHoveredContent(quickTourneys.description2);
+    setProjectHoveredContent(codWrapperContent.description2);
+  }
+  
+  function uCMouseEnter(event) {
+    setProjectIsHovered(event);
+    setProjectHoveredContent(ucContent.description2);
   }
 
-  function codWrapperMouseLeave(event) {
-    
+  function onMouseLeave(event) {
+    setProjectHoveredContent(event);
   }
 
   const TypingComponentStyles = {
@@ -135,20 +133,17 @@ function ProjectSection() {
           content={quickTourneys}
           hovered={projectIsHovered}
           callback={quickTourneysMouseEnter}
-          hovered={projectIsHovered}
         />
-        {/* <ProjectCard
+        <ProjectCard
           content={codWrapperContent}
-          hovered={projectHover}
-          onEnterCallback={codWrapperMouseEnter}
-          onLeaveCallback={codWrapperMouseLeave}
+          hovered={projectIsHovered}
+          callback={codWrapperMouseEnter}
         />
         <ProjectCard
           content={ucContent}
-          hovered={projectHover}
-          onEnterCallback={}
-          onLeaveCallback={}
-        />*/}
+          hovered={projectIsHovered}
+          callback={uCMouseEnter}
+        />
       </div> 
       {/* <div className="d-flex justify-content-center">
         <ProjectCard

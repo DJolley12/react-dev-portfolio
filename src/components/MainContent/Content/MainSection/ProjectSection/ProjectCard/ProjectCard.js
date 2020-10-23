@@ -1,5 +1,6 @@
 import React from "react";
-import CodeBadge from "./CodeBadge";
+import CodeBadges from "./CodeBadge/CodeBadges"
+import "./project-card.css"
 
 function ProjectCard(props) {
   let description = props.hovered.projectHover
@@ -25,18 +26,14 @@ function ProjectCard(props) {
     onMouseLeave={handleMouseEvent}    
     >
       <div className="row">
-        <p className="text-align-left" style={{ paddingLeft: "1rem" }}>
+        <p className="text-align-left project_card_padding">
           {props.content.heading}
         </p>
-        <p className="text-align-left" style={{ paddingLeft: "1rem" }}>
-          {props.hovered.projectHover
-            ? props.content.description2
-            : props.content.description1}
+        <p className="text-align-left project_card_padding project_card_description">
+          {props.content.description1}
         </p>
       </div>
-      <div className="row">
-        <CodeBadge content={props.content} />
-      </div>
+        <CodeBadges content={props.content} />
     </div>
   );
 }
