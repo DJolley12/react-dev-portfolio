@@ -3,12 +3,13 @@
   display: inline-block;
   width: 12em;
   height: 1.875em;
-  font-size: 0.6em;
+  font-size: 0.52em;
   white-space: nowrap;
   vertical-align: top;
   user-select: none;
   /* left: -210%; */
   margin: 0.5em;
   top: 90%;
+  margin-top: 2%;
   margin-left: 3.5%;
 }

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import ProjectCard from "./ProjectCard/ProjectCard"
-import TypingComponent from "../../../../Shared/TypingComponent/TypingComponent"
+import React, { useState } from "react";import ProjectCard from "./ProjectCard/ProjectCard";
+import TypingComponent from "../../../../Shared/TypingComponent/TypingComponent";
+import "./project-section.css";
 
 const quickTourneys = {
   heading: "Quick Tourneys Gaming",
@@ -16,7 +16,7 @@ const quickTourneys = {
     "JQuery",
   ],
   styles: {
-    left: "2.5%"
+    left: "1%"
   }
 };
 
@@ -27,7 +27,7 @@ const codWrapperContent = {
     [".NET Standard Class Library wrapper", " for Call of Duty's API.", " I decided to write this", " after I had a freelance project to do with it,", " and didn't see any other work on this in C#.", " Would've saved me a bunch of time!"],
   languages: ["C#"],
   styles: {
-    left: "35%"
+    left: "34.1%"
   }
 };
 
@@ -47,7 +47,7 @@ const ucContent = {
     "Entity Framework",
   ],
   styles: {
-    left: "67.5%"
+    right: "1%"
   }
 };
 
@@ -165,6 +165,12 @@ function ProjectSection() {
           typingContentElementId="project_hovered_typing_component"
           styles={TypingComponentStyles}
         />}
+        <div className="row layer-top project_section_pagination">
+          <div className="col-sm-3"></div>
+          <div className="col-sm-3 main_text_color">1</div>
+          <div className="col-sm-3 main_text_color">2</div>
+          <div className="col-sm-3"></div>
+        </div>
     </div>
     </>
   );
