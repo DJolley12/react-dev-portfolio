@@ -4,7 +4,7 @@ import AboutDescription from "./AboutDescription";
 import "./about_section.css";
 import SecondaryButton from "../../../../Shared/SecondaryButton";
 import NavBar from "../../../Content/NavBar";
-import StuffILove from "./StuffILove";
+import StuffILove from "./StuffIlove/StuffILove";
 import TechStack from "./TechStack/TechStack"
 
 // const aboutDescription = {
@@ -73,7 +73,7 @@ const myTechStackContent2 = {
 
 const backToAboutContent = {
   buttonText: "_back_to_about",
-  class: "about_section_button",
+  class: "back_to_about_button",
   styles: {
     position: "absolute",
     top: "59vh",

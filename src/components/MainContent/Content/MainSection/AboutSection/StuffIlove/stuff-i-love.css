@@ -1,0 +1,7 @@
+.link_tag {
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 0.5;
+}
+.link_tag:hover {
+  color: rgba(0, 0, 0, 0.85);
+}
