@@ -71,9 +71,21 @@ const myTechStackContent2 = {
   },
 };
 
-const backToAboutContent = {
+const backToAboutContent1 = {
   buttonText: "_back_to_about",
-  class: "back_to_about_button",
+  class: "about_section_button",
+  styles: {
+    opacity: ".5",
+    position: "absolute",
+    top: "59vh",
+    left: "35vw",
+  },
+};
+
+
+const backToAboutContent2 = {
+  buttonText: "_back_to_about",
+  class: "about_section_button",
   styles: {
     position: "absolute",
     top: "59vh",
@@ -126,18 +138,23 @@ function AboutSection() {
         targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
         values={[false, false, true]}
       /> : <SecondaryButton 
-      content={myTechStackContent2}
-      callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
-      targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
-      values={[false, false, true]}
+        content={myTechStackContent2}
+        callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
+        targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
+        values={[false, false, true]}
     />}
       
-      {!displayAboutDescription && <SecondaryButton
-        content={backToAboutContent} 
+      {displayAboutDescription ? <SecondaryButton
+        content={backToAboutContent1} 
         callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
         targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
         values={[true, false, false]}
-      />}
+      /> : <SecondaryButton
+        content={backToAboutContent2} 
+        callBacks={[changeAboutDescription, changeDisplayStuffILove, changeDisplayTechStack]} 
+        targets={["displayAboutDescription", "displayStuffILove", "displayTechStack"]}
+        values={[true, false, false]}
+    />}
     </div>
   );
 }

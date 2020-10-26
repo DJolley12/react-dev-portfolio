@@ -3,9 +3,6 @@ import CodeBadges from "./CodeBadge/CodeBadges"
 import "./project-card.css"
 
 function ProjectCard(props) {
-  let description = props.hovered.projectHover
-    ? props.content.description2
-    : props.content.description1;
 
     function handleMouseEvent(event) {
       console.log(event);

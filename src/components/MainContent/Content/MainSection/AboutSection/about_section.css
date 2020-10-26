@@ -4,22 +4,11 @@
 .about_section_button {
   animation: buttonFadeIn 1s ease;
 }
-.back_to_about_button {
-  animation: backButtonFadeIn 1s ease;
-}
 @keyframes buttonFadeIn {
   0% {
     opacity: 0;
   }
   50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes backButtonFadeIn {
-  0% {
     opacity: 0;
   }
   100% {

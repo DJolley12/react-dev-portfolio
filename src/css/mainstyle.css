@@ -168,7 +168,7 @@
 .nav_bar {
   position: absolute;
   top: 92vh;
-  left: 27%;
+  left: 31%;
   align-self: center;
 }
 .nav_button {
@@ -180,9 +180,6 @@
 }
 .main_text_color {
   color: #30c31c;
-}
-#nav_button {
-  margin-right: 1rem;
 }
 #view_my_work_button {
   margin-top: 5vh;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";import ProjectCard from "./ProjectCard/ProjectCard";
 import TypingComponent from "../../../../Shared/TypingComponent/TypingComponent";
 import "./project-section.css";
+import SecondaryButton from "../../../../Shared/SecondaryButton";
 
 const quickTourneys = {
   heading: "Quick Tourneys Gaming",
@@ -56,23 +57,24 @@ const siteContent = {
   description1:
     "This is my portfolio, and official personal webpage for both freelancing and employment inquiries.",
   description2:
-    "I wanted a way to play with React, and demonstrate my abilities to apply it to a project. ",
+    ["I wanted a way to play with React,", " and demonstrate my abilities to apply it to a project. "],
   languages: [
     "React",
     "CSS3",
     "HTML5",
     "Bootstrap",
     "NES.css",
-    "(I love frameworks/libraries, can you tell?)",
   ],
-  
+  styles: {
+    left: "1%"
+  }
 };
 
 const dbBackup = {
   heading: "Database Backup",
-  description1: "Database backup tool written in C#",
+  description1: "Database backup tool written in C# for use on local and azure databases",
   description2:
-    "Written as a utility for utah committee admins, this is for backing up both Azure and local SQL databases.",
+    ["Written as a utility for utah committee admins,", " this is for backing up both Azure", " and local SQL databases."],
   languages: [
     "C#",
     "ASP.NET Core",
@@ -82,11 +84,15 @@ const dbBackup = {
     "Bootstrap",
     "Entity Framework",
   ],
+  styles: {
+    right: "34.1%"
+  }
 };
 
 function ProjectSection() {
   const [projectHoveredContent, setProjectHoveredContent] = useState();
   const [projectIsHovered, setProjectIsHovered] = useState(false);
+  const [pageSelected, setPageSelected] = useState(1);
 
   function quickTourneysMouseEnter(event) {
     console.log("project hovered");
@@ -105,9 +111,23 @@ function ProjectSection() {
     setProjectHoveredContent(ucContent.description2);
   }
 
-  function onMouseLeave(event) {
-    setProjectHoveredContent(event);
+  function siteMouseEnter(event) {
+    setProjectIsHovered(event);
+    setProjectHoveredContent(siteContent.description2);
   }
+
+  function dbBackupMouseEnter(event) {
+    setProjectIsHovered(event);
+    setProjectHoveredContent(dbBackup.description2);
+  }
+
+  function handlePageClick(event) {
+    setPageSelected(event);
+  }
+
+  // function onMouseLeave(event) {
+  //   setProjectHoveredContent(event);
+  // }
 
   const TypingComponentStyles = {
     fontSize: "70%",
@@ -116,6 +136,40 @@ function ProjectSection() {
     width: "70%",
     left: "15%"
   }
+
+  const pageOneButton1 = {
+      buttonText: "1",
+      class: "project_section_pagination1",
+      styles: {
+        opacity: ".5",
+        position: "absolute",
+      },
+  }
+
+  const pageOneButton2 = {
+    buttonText: "1",
+    class: "project_section_pagination1",
+    styles: {
+      position: "absolute",
+    },
+}
+
+const pageTwoButton1 = {
+  buttonText: "2",
+  class: "project_section_pagination2",
+  styles: {
+    opacity: ".5",
+    position: "absolute",
+  },
+}
+
+const pageTwoButton2 = {
+  buttonText: "2",
+  class: "project_section_pagination2",
+  styles: {
+    position: "absolute",
+  },
+}
 
   return (
     <>
@@ -128,49 +182,68 @@ function ProjectSection() {
     <div className="container-flex layer-top main_border">
         <h4 className="heading bottom-border">My Work</h4>
       
-      <div className="d-flex">
-        <ProjectCard
-          content={quickTourneys}
-          hovered={projectIsHovered}
-          callback={quickTourneysMouseEnter}
-        />
-        <ProjectCard
-          content={codWrapperContent}
-          hovered={projectIsHovered}
-          callback={codWrapperMouseEnter}
-        />
-        <ProjectCard
-          content={ucContent}
-          hovered={projectIsHovered}
-          callback={uCMouseEnter}
-        />
-      </div> 
-      {/* <div className="d-flex justify-content-center">
-        <ProjectCard
-          content={dbBackup}
-          hovered={projectHover}
-          onEnterCallback={}
-          onLeaveCallback={}
-        />
-        <ProjectCard
-          content={siteContent}
-          hovered={projectHover}
-          onEnterCallback={}
-          onLeaveCallback={}
-        />
-      </div> */}
+    <div className="d-flex">
+    {pageSelected === 1 ? 
+     
+        <> 
+          <ProjectCard
+            content={quickTourneys}
+            hovered={projectIsHovered}
+            callback={quickTourneysMouseEnter}
+          />
+          <ProjectCard
+            content={codWrapperContent}
+            hovered={projectIsHovered}
+            callback={codWrapperMouseEnter}
+          />
+          <ProjectCard
+            content={ucContent}
+            hovered={projectIsHovered}
+            callback={uCMouseEnter}
+          />
+        </> : 
+        <>
+          <ProjectCard
+            content={siteContent}
+            hovered={projectIsHovered}
+            callback={siteMouseEnter}
+          />
+          <ProjectCard
+            content={dbBackup}
+            hovered={projectIsHovered}
+            callback={dbBackupMouseEnter}
+          />
+        </>
+      } 
+      </div>  
       {projectIsHovered && <TypingComponent 
           classString="main_text_color"
           text1={projectHoveredContent}
           typingContentElementId="project_hovered_typing_component"
           styles={TypingComponentStyles}
         />}
-        <div className="row layer-top project_section_pagination">
-          <div className="col-sm-3"></div>
-          <div className="col-sm-3 main_text_color">1</div>
-          <div className="col-sm-3 main_text_color">2</div>
-          <div className="col-sm-3"></div>
-        </div>
+        {pageSelected === 1 ? <SecondaryButton 
+          content={pageOneButton1}
+          callBacks={[handlePageClick]} 
+          targets={[pageSelected]}
+          values={[1]}
+        /> : <SecondaryButton 
+          content={pageOneButton2}
+          callBacks={[handlePageClick]} 
+          targets={[pageSelected]}
+          values={[1]}
+        />}
+        {pageSelected === 2 ? <SecondaryButton 
+          content={pageTwoButton1}
+          callBacks={[handlePageClick]} 
+          targets={[pageSelected]}
+          values={[2]}
+        /> : <SecondaryButton 
+          content={pageTwoButton2}
+          callBacks={[handlePageClick]} 
+          targets={[pageSelected]}
+          values={[2]}
+        />}
     </div>
     </>
   );

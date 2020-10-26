@@ -1,7 +1,15 @@
 .link_tag {
-  color: rgba(0, 0, 0, 0.7);
   opacity: 0.5;
+  text-decoration: underline;
+  color: #30c31c;
 }
 .link_tag:hover {
   color: rgba(0, 0, 0, 0.85);
+}
+#back_to_stuff_button {
+  text-align: center;
+  padding-left: 0.2%;
+}
+.stuff_paragraph {
+  margin-top: 7%;
 }
