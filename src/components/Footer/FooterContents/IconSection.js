@@ -22,14 +22,15 @@ function IconSection() {
       </a>
       <a
           href="https://www.linkedin.com/in/daniel-jolley-06947b1b5/"
-          className="justify-content-lg-center"       
-        >
-        <i className="icon_list nes-icon linkedin is-large d-flex flicker"></i>
+          className="d-flex justify-content-lg-center"       
+      >
+        <i className="icon_list nes-icon linkedin is-large flicker"></i>
       </a>
       <a
+      href="mailto:dcjolley12@gmail.com"
         className="d-flex justify-content-lg-center"
       >
-        <i className="icon_list nes-icon gmail is-large  flicker"></i>
+        <i className="icon_list nes-icon gmail is-large flicker"></i>
       </a>
     </section>
   );

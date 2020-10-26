@@ -143,6 +143,8 @@ function ProjectSection() {
       styles: {
         opacity: ".5",
         position: "absolute",
+        width: "3%",
+        textAlign: "center"
       },
   }
 
@@ -151,6 +153,8 @@ function ProjectSection() {
     class: "project_section_pagination1",
     styles: {
       position: "absolute",
+      width: "3%",
+      textAlign: "center"
     },
 }
 
@@ -160,6 +164,8 @@ const pageTwoButton1 = {
   styles: {
     opacity: ".5",
     position: "absolute",
+    width: "3%",
+    textAlign: "center"
   },
 }
 
@@ -168,6 +174,8 @@ const pageTwoButton2 = {
   class: "project_section_pagination2",
   styles: {
     position: "absolute",
+    width: "3%",
+    textAlign: "center"
   },
 }
 

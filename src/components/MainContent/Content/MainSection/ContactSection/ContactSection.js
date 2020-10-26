@@ -3,9 +3,13 @@ import "./contact-section.css";
 
 function ContactSection() {
     return ( 
-        <form id="contact_form" className="layer-top main_text_color contact_section">
-            <input id="email_input" className="main_text_color contact_section" placeholder="Enter your email"></input>
-        </form> 
+        <a
+            href="mailto:dcjolley12@gmail.com"
+            className="d-flex justify-content-lg-center layer-top"
+        >
+            <div className="main_text_color">dcjolley12@gmail.com</div>
+            <i className="icon_list nes-icon gmail is-large flicker"></i>
+        </a>
     )
 }
 
