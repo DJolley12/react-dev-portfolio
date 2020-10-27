@@ -15,13 +15,13 @@ function IconSection() {
       style={iconSectionStyles}
     >
       <a
-        href="https://github.com/DJolley12"
+        onClick={() => window.open("https://github.com/DJolley12", "_blank")} 
         className="d-flex justify-content-lg-center"
       >
         <i className="icon_list nes-icon github is-large flicker"></i>
       </a>
       <a
-          href="https://www.linkedin.com/in/daniel-jolley-06947b1b5/"
+          onClick={() => window.open("https://www.linkedin.com/in/daniel-jolley-06947b1b5/", "_blank")} 
           className="d-flex justify-content-lg-center"       
       >
         <i className="icon_list nes-icon linkedin is-large flicker"></i>

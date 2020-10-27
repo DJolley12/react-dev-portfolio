@@ -77,12 +77,6 @@ const dbBackup = {
     ["Written as a utility for utah committee admins,", " this is for backing up both Azure", " and local SQL databases."],
   languages: [
     "C#",
-    "ASP.NET Core",
-    "Razor Pages",
-    "JavaScript",
-    "JQuery",
-    "Bootstrap",
-    "Entity Framework",
   ],
   styles: {
     right: "34.1%"
