@@ -119,10 +119,6 @@ function ProjectSection() {
     setPageSelected(event);
   }
 
-  // function onMouseLeave(event) {
-  //   setProjectHoveredContent(event);
-  // }
-
   const TypingComponentStyles = {
     fontSize: "70%",
     top: "65%",
@@ -175,12 +171,6 @@ const pageTwoButton2 = {
 
   return (
     <>
-    {/* {projectIsHovered && <TypingComponent 
-          classString="main_text_color layer-top"
-          text1={projectHoveredContent}
-          typingContentElementId="project_hovered_typing_component"
-          styles={TypingComponentStyles}
-        />} */}
     <div className="container-flex layer-top main_border">
         <h4 className="heading bottom-border">My Work</h4>
       
