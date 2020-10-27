@@ -7,21 +7,23 @@
   white-space: nowrap;
   vertical-align: top;
   user-select: none;
-  /* left: -210%; */
   margin: 0.5em;
   top: 90%;
   margin-top: 2%;
   margin-left: 3.5%;
-  animation: badgeFadeIn 1s ease;
 }
 .nes-badge span.is-dark:first-child {
   color: #30c31c;
+  animation: badgeFadeIn 1s ease;
 }
 @keyframes badgeFadeIn {
   0% {
-    visibility: hidden;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
   }
   100% {
-    visibility: visible;
+    opacity: 1;
   }
 }

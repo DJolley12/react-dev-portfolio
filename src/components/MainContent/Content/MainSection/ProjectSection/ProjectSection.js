@@ -2,6 +2,8 @@ import React, { useState } from "react";import ProjectCard from "./ProjectCard/P
 import TypingComponent from "../../../../Shared/TypingComponent/TypingComponent";
 import "./project-section.css";
 import SecondaryButton from "../../../../Shared/SecondaryButton";
+import Page1 from "./Page1";
+import Page2 from "./Page2";
 
 const quickTourneys = {
   heading: "Quick Tourneys Gaming",
@@ -176,67 +178,53 @@ const pageTwoButton2 = {
       
     <div className="d-flex">
     {pageSelected === 1 ? 
-     
-        <> 
-          <ProjectCard
-            content={quickTourneys}
-            hovered={projectIsHovered}
-            callback={quickTourneysMouseEnter}
-          />
-          <ProjectCard
-            content={codWrapperContent}
-            hovered={projectIsHovered}
-            callback={codWrapperMouseEnter}
-          />
-          <ProjectCard
-            content={ucContent}
-            hovered={projectIsHovered}
-            callback={uCMouseEnter}
-          />
-        </> : 
-        <>
-          <ProjectCard
-            content={siteContent}
-            hovered={projectIsHovered}
-            callback={siteMouseEnter}
-          />
-          <ProjectCard
-            content={dbBackup}
-            hovered={projectIsHovered}
-            callback={dbBackupMouseEnter}
-          />
-        </>
-      } 
-      </div>  
-      {projectIsHovered && <TypingComponent 
-          classString="main_text_color"
-          text1={projectHoveredContent}
-          typingContentElementId="project_hovered_typing_component"
-          styles={TypingComponentStyles}
-        />}
-        {pageSelected === 1 ? <SecondaryButton 
-          content={pageOneButton1}
-          callBacks={[handlePageClick]} 
-          targets={[pageSelected]}
-          values={[1]}
-        /> : <SecondaryButton 
-          content={pageOneButton2}
-          callBacks={[handlePageClick]} 
-          targets={[pageSelected]}
-          values={[1]}
-        />}
-        {pageSelected === 2 ? <SecondaryButton 
-          content={pageTwoButton1}
-          callBacks={[handlePageClick]} 
-          targets={[pageSelected]}
-          values={[2]}
-        /> : <SecondaryButton 
-          content={pageTwoButton2}
-          callBacks={[handlePageClick]} 
-          targets={[pageSelected]}
-          values={[2]}
-        />}
-    </div>
+      <Page1 
+        quickTourneys={quickTourneys}
+        codWrapperContent={codWrapperContent}
+        ucContent={ucContent}
+        projectIsHovered={projectIsHovered}
+        quickTourneysMouseEnter={quickTourneysMouseEnter}
+        codWrapperMouseEnter={codWrapperMouseEnter}
+        uCMouseEnter={uCMouseEnter}
+      /> : 
+      <Page2 
+        siteContent={siteContent}
+        dbBackup={dbBackup}
+        projectIsHovered={projectIsHovered}
+        siteMouseEnter={siteMouseEnter}
+        dbBackupMouseEnter={dbBackupMouseEnter}
+      />
+    } 
+    </div>  
+    {projectIsHovered && <TypingComponent 
+        classString="main_text_color"
+        text1={projectHoveredContent}
+        typingContentElementId="project_hovered_typing_component"
+        styles={TypingComponentStyles}
+      />}
+      {pageSelected === 1 ? <SecondaryButton 
+        content={pageOneButton1}
+        callBacks={[handlePageClick]} 
+        targets={[pageSelected]}
+        values={[1]}
+      /> : <SecondaryButton 
+        content={pageOneButton2}
+        callBacks={[handlePageClick]} 
+        targets={[pageSelected]}
+        values={[1]}
+      />}
+      {pageSelected === 2 ? <SecondaryButton 
+        content={pageTwoButton1}
+        callBacks={[handlePageClick]} 
+        targets={[pageSelected]}
+        values={[2]}
+      /> : <SecondaryButton 
+        content={pageTwoButton2}
+        callBacks={[handlePageClick]} 
+        targets={[pageSelected]}
+        values={[2]}
+      />}
+      </div>
     </>
   );
 }
