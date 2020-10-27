@@ -73,7 +73,7 @@ const myTechStackContent2 = {
 
 const backToAboutContent1 = {
   buttonText: "_back_to_about",
-  class: "about_section_button",
+  class: "about_section_back_button",
   styles: {
     opacity: ".5",
     position: "absolute",
@@ -85,7 +85,7 @@ const backToAboutContent1 = {
 
 const backToAboutContent2 = {
   buttonText: "_back_to_about",
-  class: "about_section_button",
+  class: "about_section_back_button",
   styles: {
     position: "absolute",
     top: "59vh",

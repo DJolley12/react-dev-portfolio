@@ -3,7 +3,7 @@
   display: inline-block;
   width: 12em;
   height: 1.875em;
-  font-size: 0.52em;
+  font-size: 0.55em;
   white-space: nowrap;
   vertical-align: top;
   user-select: none;
@@ -13,6 +13,9 @@
   margin-top: 2%;
   margin-left: 3.5%;
   animation: badgeFadeIn 1s ease;
+}
+.nes-badge span.is-dark:first-child {
+  color: #30c31c;
 }
 @keyframes badgeFadeIn {
   0% {

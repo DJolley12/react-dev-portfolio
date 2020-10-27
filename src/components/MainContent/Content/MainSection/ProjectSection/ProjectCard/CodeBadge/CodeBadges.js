@@ -2,16 +2,6 @@ import React from "react";
 
 import "./code-badge.css";
 
-// function CodeBadge(props) {
-//   const languages = props.content.languages.map((language) => (
-//     <a key={props.content.heading + language} href="#" class="nes-badge">
-//       <span class="is-dark secondary_button">{language}</span>
-//     </a>
-//   ));
-
-//   return <>{languages}</>;
-// }
-
 function CodeBadges(props) {
   const languages = [];
   let codeBadgeCount = 0;
@@ -26,19 +16,10 @@ function CodeBadges(props) {
 
     elements.push(element);
 
-    console.log("element");
-    console.log(element);
-    console.log("language" + language);
-    console.log("elements");
-    console.log(elements.length);
-
-    if (codeBadgeCount === 2 || props.content.languages.length === 1) {
+    if (codeBadgeCount === 2 || props.content.languages.length === 1 || (props.content.languages.length - 1) === index) {
       codeBadgeCount = 0;
       const row = <div className="row">{elements}</div>;
-  
-      console.log("elements length in if " + elements.length)
-      console.log("row ");
-      console.log(row);
+
       languages.push(row);
       elements = [];
     } else {
@@ -46,8 +27,6 @@ function CodeBadges(props) {
     }
   }
 
-  console.log("languages length " + languages.length);
-  console.log(languages);
   return <>{languages}</>;
 }
 

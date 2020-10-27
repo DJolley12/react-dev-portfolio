@@ -233,6 +233,7 @@
   margin-top: 15vh;
   height: 70vh;
   width: 75vw;
+  animation: menuFadeIn 2s ease;
 }
 .main_content {
   height: 100vh;
@@ -275,6 +276,14 @@
   }
   50% {
     opacity: 1;
+  }
+}
+@keyframes menuFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
   }
 }
 .nes-icon.linkedin::before {
