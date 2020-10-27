@@ -10,7 +10,6 @@ const styles = {
 function InfoHeading() {
     return (
         <h4 id="info_heading" className="main_text_color layer-top" style={styles}>PRESS ENTER TO INTERACT WITH CONSOLE</h4>
-
     )
 }
 
