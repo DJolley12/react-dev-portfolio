@@ -105,7 +105,7 @@ function StuffILove() {
     }
 
     function handleLiveServerClick() {
-        changeDisplayPackageManagers(true);
+        changeDisplayLiveServer(true);
         changeDisplayBackButton(true);
         changeDisplayMenu(false);
     } 
