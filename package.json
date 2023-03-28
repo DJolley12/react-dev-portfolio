@@ -4,18 +4,18 @@
   "private": true,
   "homepage": "https://djolley12.github.io/react-dev-portfolio/",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "",
     "cross-env": "^7.0.2",
     "nes.css": "",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3"
+    "react-scripts": "^5.0.0"
   },
   "scripts": {
-    "start": "cross-env BROWSER=chrome react-scripts start",
+    "start": "cross-env BROWSER=firefox react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",

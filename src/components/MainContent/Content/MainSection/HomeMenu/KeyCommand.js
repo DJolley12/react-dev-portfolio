@@ -1,8 +1,7 @@
 import React from "react";
 
 function KeyCommand(props) {
-  function handleClick() {
-  }
+  function handleClick() {}
   return (
     <div
       id={props.content.buttonText}

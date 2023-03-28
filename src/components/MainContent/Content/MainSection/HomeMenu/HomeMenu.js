@@ -1,6 +1,6 @@
 import React from "react";
-import SecondaryButton from "../../../../Shared/SecondaryButton"
-import "./home-menu.css"
+import SecondaryButton from "../../../../Shared/SecondaryButton";
+import "./home-menu.css";
 import HomeHeading from "./HomeHeading";
 import KeyCommand from "./KeyCommand";
 
@@ -45,13 +45,13 @@ const contactCommandButton = {
 };
 
 function HomeMenu(props) {
-  return(
+  return (
     <div id="home_menu" className="layer-top main_border">
-      <HomeHeading /> 
-      <KeyCommand content={homeCommandButton}/>
-      <KeyCommand content={aboutCommandButton}/>
-      <KeyCommand content={myWorkCommandButton}/>
-      <KeyCommand content={contactCommandButton}/>
+      <HomeHeading />
+      <KeyCommand content={homeCommandButton} />
+      <KeyCommand content={aboutCommandButton} />
+      <KeyCommand content={myWorkCommandButton} />
+      <KeyCommand content={contactCommandButton} />
       {/*<SecondaryButton />
       <SecondaryButton />
       <SecondaryButton /> */}
