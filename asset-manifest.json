@@ -1,23 +1,14 @@
 {
   "files": {
-    "main.css": "/react-dev-portfolio/static/css/main.8c806d06.chunk.css",
-    "main.js": "/react-dev-portfolio/static/js/main.1d9e898f.chunk.js",
-    "main.js.map": "/react-dev-portfolio/static/js/main.1d9e898f.chunk.js.map",
-    "runtime-main.js": "/react-dev-portfolio/static/js/runtime-main.ff3d9ddc.js",
-    "runtime-main.js.map": "/react-dev-portfolio/static/js/runtime-main.ff3d9ddc.js.map",
-    "static/js/2.0a106ee7.chunk.js": "/react-dev-portfolio/static/js/2.0a106ee7.chunk.js",
-    "static/js/2.0a106ee7.chunk.js.map": "/react-dev-portfolio/static/js/2.0a106ee7.chunk.js.map",
+    "main.css": "/react-dev-portfolio/static/css/main.0aca079d.css",
+    "main.js": "/react-dev-portfolio/static/js/main.499a6a96.js",
+    "static/media/waneella_pink_city.gif": "/react-dev-portfolio/static/media/waneella_pink_city.38c1c3e7aab2ab23b587.gif",
     "index.html": "/react-dev-portfolio/index.html",
-    "precache-manifest.3b2805733e470652e7edfcfd80eaee10.js": "/react-dev-portfolio/precache-manifest.3b2805733e470652e7edfcfd80eaee10.js",
-    "service-worker.js": "/react-dev-portfolio/service-worker.js",
-    "static/css/main.8c806d06.chunk.css.map": "/react-dev-portfolio/static/css/main.8c806d06.chunk.css.map",
-    "static/js/2.0a106ee7.chunk.js.LICENSE.txt": "/react-dev-portfolio/static/js/2.0a106ee7.chunk.js.LICENSE.txt",
-    "static/media/waneella_pink_city.gif": "/react-dev-portfolio/static/media/waneella_pink_city.0f154d69.gif"
+    "main.0aca079d.css.map": "/react-dev-portfolio/static/css/main.0aca079d.css.map",
+    "main.499a6a96.js.map": "/react-dev-portfolio/static/js/main.499a6a96.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.ff3d9ddc.js",
-    "static/js/2.0a106ee7.chunk.js",
-    "static/css/main.8c806d06.chunk.css",
-    "static/js/main.1d9e898f.chunk.js"
+    "static/css/main.0aca079d.css",
+    "static/js/main.499a6a96.js"
   ]
 }
